@@ -1,0 +1,110 @@
+@media only screen and (max-width: 1024px) {
+
+    .app-menu {
+        width: 65% !important;
+    }
+
+
+    .all-menus {
+        padding: 7px 18px;
+    }
+
+    #funnel {
+        width: 300px;
+    }
+    .all-contact-content{
+        display: none !important;
+    }
+    .todolist-all-area{
+        flex-direction: column-reverse !important;
+    }
+    .todolist-second-area{
+        width: 100%;
+    }
+    .todolist-first-area{
+        width: 100%;
+    }
+     ul.todo-unorder {
+        gap: 3px;
+     }
+ 
+   
+}
+
+@media only screen and (max-width: 500px) {
+
+    .funnel-chart-area {
+
+        width: 100% !important;
+    }
+
+    .app-menu {
+        display: none;
+        width: 100% !important;
+        z-index: 9;
+        position: fixed;
+        background: white;
+    }
+    .all-menu-pages-area{
+        padding-top: 5rem;
+    }
+    .company-logo{
+        display: none !important;
+    }
+
+    .menu-arrow{
+        display: block !important;
+    }
+
+    .menu-text{
+        display: block !important;
+    }
+
+    .responsive-event {
+        position: fixed;
+        width: 5%;
+        display: block;
+        width: 80% !important;
+    }
+
+    .rock-line-chart-area {
+        width: 100% !important;
+    }
+
+    /* create Contact  */
+
+    .label-name{
+        font-size: x-small !important;
+    }
+    .email-btn {
+        padding: 13px 11px;
+        font-size: x-small;
+    }
+    .text-responsive{
+        font-size: 12px;
+     }
+    .text-logo-area{
+        display: flex;
+        flex-wrap: wrap;
+     }
+     .response-text-small{
+        font-size: 12px;
+     }
+
+    /* .app-menu{
+        width: 5% !important;
+        display: none;
+    }
+    .side-menu-user{
+        display: block !important;
+    } */
+}
+
+/* @media only screen and (max-width: 400px){
+    .app-menu-mobile {
+        width: 75% !important;
+        z-index: 9;
+        position: fixed;
+        background: white;
+    }
+} */

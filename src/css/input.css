@@ -1,0 +1,671 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+h5 {
+  font-size: inherit;
+  font-weight: 600;
+  font-family: Karla, sans-serif;
+}
+
+/* menu bar start */
+
+.logo-box .logo-light {
+  display: none;
+}
+
+.logo-dark .logo-sm {
+  display: none;
+}
+
+
+.app-menu {
+  color: rgb(108, 117, 125);
+  width: 24%;
+
+  min-width: var(--tw-sidenav-width);
+  background: var(--tw-menu-bg);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+}
+
+.logo-dark {
+  justify-content: center;
+  display: flex;
+  padding: 25px 7px;
+}
+
+.all-menus {
+  display: grid;
+  padding: 7px 30px;
+  gap: 18px;
+}
+
+.right-arrow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-arrow .right-icon {
+  font-size: 10px;
+}
+
+/* menu bar end */
+.page-content {
+  position: sticky;
+  top: 0;
+  z-index: 35;
+  background: #f3f4f6;
+  height: 70px;
+  width: 100%;
+  border-bottom: #f3f4f6;
+}
+
+.page-content {}
+
+.header-nav {
+  padding-top: 15px;
+
+}
+
+.toggle-icon {
+  font-size: 16px;
+  color: rgb(108, 117, 125);
+
+}
+
+.dark .toggle-icon:hover {
+  color: #ffffff;
+  /* Text color for dark mode when hovering */
+}
+
+.menu-item:focus .sub-menu {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu .menu-item .menu-link:is(.open, .active, :active, :focus) {
+  color: #71b6f9;
+  /* display: flex; */
+}
+
+.menu .menu-item .menu-link:is(.open, .active, :hover) {
+  color: #71b6f9;
+  /* display: flex; */
+
+}
+
+.dark .menu .menu-item .menu-link:is(.open, .active, :hover) {
+  color: #ffffff;
+  /* Text color for dark mode when hovering */
+}
+
+.dark {
+  background-color: #1a202c;
+  color: #ffffff;
+}
+
+/* progress bar */
+.card .percent {
+  position: relative;
+}
+
+.card svg {
+  position: relative;
+  width: 151px;
+  left: -26px;
+  top: 26px;
+  height: 112px;
+  transform: rotate(-256deg);
+
+}
+
+.card svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #f0f0f0;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.card svg circle:last-of-type {
+  stroke-dasharray: 625px;
+  stroke-dashoffset: calc(625px - (625px * var(--percent)) / 100);
+  stroke: #3498db;
+}
+
+.card .number {
+  position: absolute;
+  top: 95%;
+  left: 16%;
+  transform: translate(-50%, -50%);
+}
+
+.card .number h3 {
+  font-size: 0.8rem;
+}
+
+.card .title h2 {
+  margin: 25px 0 0;
+}
+
+
+
+.card:nth-child(2) svg circle:last-of-type {
+  stroke: #2ecc71;
+}
+
+.bg-\[\#ff8acc\].h-2\.5.rounded-full {
+  height: 6px;
+}
+
+.progress-text {
+  position: relative;
+  top: -85px;
+  left: 48px;
+}
+
+
+.w-full.bg-gray-200.rounded-full.h-2\.5.mb-4.dark\:bg-gray-700 {
+  height: 6px;
+}
+
+.bg-green-500.h-2\.5.rounded-full {
+  height: 6px;
+}
+
+
+/* // morris js */
+
+
+.color-pink {
+  background: #ff8acc;
+  padding: 0px 10px;
+  border-radius: 15px;
+}
+
+.color-blue {
+  background: #35b8e0;
+  padding: 0px 10px;
+  border-radius: 15px;
+}
+
+
+/* Set the width of the scrollbar */
+
+.scrollable {
+  overflow-y: scroll;
+  /* Add a vertical scrollbar */
+  scrollbar-width: thin;
+  /* For Firefox */
+  scrollbar-color: transparent transparent;
+  /* For Firefox - set the scrollbar track and thumb color */
+  scrollbar-color: #a7a7a7 #ebebeb;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 5px;
+  /* Adjust the width to make it thinner or wider */
+}
+
+/* For Internet Explorer and Edge */
+.scrollable::-ms-scrollbar {
+  width: 5px;
+  /* Adjust the width to make it thinner or wider */
+}
+
+/* Optional: Set the color of the scrollbar thumb (handle) */
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #cbcbcb;
+  /* Change the color to your preference */
+
+}
+
+/* Optional: Set the color of the scrollbar track */
+.scrollable::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  /* Change the color to your preference */
+}
+
+/* Dark mode styles */
+body.dark .scrollable::-webkit-scrollbar-thumb {
+  background-color: rgb(48, 65, 88);
+  /* Red color for dark mode */
+}
+
+body.dark .scrollable::-webkit-scrollbar-track {
+  background-color: #1a202c
+    /* Dark background color for dark mode */
+}
+
+
+/* main content scroll */
+.main-content-scroll::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  /* Change the color to your preference */
+}
+
+body.dark .main-content-scroll::-webkit-scrollbar-thumb {
+  background-color: #686868;
+  /* Red color for dark mode */
+}
+
+body.dark .main-content-scroll::-webkit-scrollbar-track {
+  background-color: #686868
+    /* Dark background color for dark mode */
+}
+
+/* inbox */
+
+/* Define styles for the hover effect when not in dark mode */
+.project-first:hover {
+  background-color: rgb(55 65 81 / .4);
+  /* Red background color for hover effect */
+}
+
+/* Define styles for the hover effect in dark mode */
+.dark .project-first:hover {
+  background-color: rgb(55 65 81 / .4);
+  /* Dark red background color for hover effect in dark mode */
+}
+
+
+/* header dark mode */
+
+/* Your default styles for app-header */
+.app-header {
+  background-color: #f3f4f6;
+  /* Add other styles as needed */
+}
+
+.total-revenue {
+  background: white;
+}
+
+body.dark .total-revenue {
+  background-color: #1f2937;
+  color: white;
+}
+
+/* Styles for app-header when body has the "dark" class */
+body.dark .app-header {
+  background-color: #1b1d2e;
+  color: white;
+  /* Set the text color to white or another color that contrasts well with black */
+  /* Add other styles as needed */
+}
+
+.revenue-nub {
+  /* width: 52%; */
+  display: inline-block;
+}
+
+
+
+i.fa-brands.fa-telegram.block.mx-auto.w-1\/3.rounded-full.sm\:mx-0.sm\:shrink-0 {
+  font-size: 41px;
+}
+
+i.fa-regular.fa-sun.hidden.dark\:block {
+  display: none;
+}
+
+/* todo list */
+
+.search-text,
+h3 {
+  color: #7a7a7a;
+}
+
+.todolist-all-area {
+  width: 100%;
+  display: flex;
+  padding-top: 1.5rem;
+}
+
+.todolist-first-area {
+  width: 30%;
+  border-right: 1px solid rgb(235, 234, 234);
+  height: auto;
+}
+
+.todo-area {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.dropdown-content {
+  width: 100%;
+  font-size: 11px;
+  padding: 10px 0px;
+  background: #0a81ff;
+  color: white;
+
+}
+
+.dropdown-boxs {
+  position: relative;
+  width: 45%;
+  display: flex;
+  top: 38px;
+}
+
+.todo-record {
+  position: relative;
+  top: -10px;
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+.todo-text {
+  position: relative;
+  top: 21px;
+  padding-bottom: 1rem;
+
+}
+
+.todo-text h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding-bottom: 3rem;
+}
+
+.option {
+  padding-bottom: 10px;
+}
+
+.todolist-second-area {
+  width: 70%;
+}
+
+.todolist-links {
+  width: 100%;
+  display: block;
+}
+
+.todolist-second-area,
+.todolist-links,
+ul {
+  display: block;
+  gap: 3rem;
+}
+
+.todolist-second-area,
+.todolist-links,
+ul li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: #9d9d9d;
+  font-weight: 500;
+}
+
+.todo-unorder {
+  width: 95%;
+  border-bottom: 1px solid #e3e3e3;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* // ./src/SearchBar.css */
+form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.open-task-search {
+  padding: 0.5rem;
+  border-radius: 1.25rem;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 75%;
+  margin-right: 0.5rem;
+}
+
+button[type="submit"] {
+  padding: 0.5rem 3rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  padding-top: 15px;
+  gap: 0.2rem;
+}
+
+.seacrch-text {
+  text-align: center;
+}
+
+.seacrch-text h2 {
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  font-size: x-large;
+}
+
+.todo-all-text {
+  position: relative;
+  top: -1rem;
+}
+
+.small-nav-dropdown {
+  z-index: 9;
+  position: absolute;
+  height: auto;
+  width: 300px;
+  background: rgb(255, 255, 255);
+  left: 58rem;
+  border-radius: 8px;
+  box-shadow: 0px 0px 4px 0px black;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.small-nav-folder-drop {
+  position: absolute;
+  padding: 10px 17px;
+  height: auto;
+  top: 7.6rem;
+  background: rgb(255, 255, 255);
+  left: 67rem;
+  border-radius: 8px;
+  box-shadow: 0px 0px 4px 0px black;
+  padding-top: 26px;
+  cursor: pointer;
+}
+
+.small-nav-transfer-drop {
+  position: absolute;
+  left: 37rem;
+  width: 54%;
+}
+
+.check-box-btn {
+  padding: 0px 20px;
+  border-radius: 5px;
+  display: flex;
+  ALIGN-ITEMS: center;
+  border: 2px solid rgb(237, 237, 237);
+}
+
+/* tooltip  */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #898888;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 81px;
+  background-color: #898888;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #898888 transparent transparent;
+}
+
+.tooltip .tooltiptext {
+  visibility: visible;
+}
+
+.new-status-contact {
+  border-radius: 11px 11px;
+  text-align: center;
+  height: 22px;
+}
+
+/* orange Tooltip */
+.tooltip-orange {
+  position: relative;
+  display: inline-block;
+  border-right: 1px dotted #f06b0e;
+
+}
+
+.tooltip-orange .tooltiptext-orange {
+  visibility: hidden;
+  width: 81px;
+  background-color: #f06b0e;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 1.5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 110%;
+  transform: translate(0, -50%);
+}
+
+.tooltip-orange .tooltiptext-orange::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -23%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #f06b0e;
+}
+
+.tooltip-orange .tooltiptext-orange {
+  visibility: visible;
+}
+
+/* dark Tooltip */
+
+.tooltip-dark {
+  position: relative;
+  display: inline-block;
+  border-right: 1px dotted #6d6d6d;
+
+}
+
+.tooltip-dark .tooltiptext-dark {
+  visibility: hidden;
+  width: 81px;
+  background-color: #6d6d6d;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  padding: 1.5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 110%;
+  transform: translate(0, -50%);
+}
+
+.tooltip-dark .tooltiptext-dark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -23%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #6d6d6d;
+}
+
+.tooltip-dark .tooltiptext-dark {
+  visibility: visible;
+}
+
+#rockLineChart{
+  width: 100%;
+} 
+
+/* ck editor */
+
+.ck-blurred.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline {
+  height: 15rem;
+}
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-blurred {
+  height: 15rem !important;
+}
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-blurred {
+  height: 15rem !important;
+}
+.ck-rounded-corners .ck.ck-editor__main>.ck-editor__editable, .ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners {
+  border-radius: var(--ck-border-radius);
+  border-top-left-radius: 0;
+  /* border-top-right-radius: 0; */
+  height: 15rem;
+}
+
+.ck-content {
+padding-left: 2rem !important;
+}
+.ck-content ul li{
+list-style-type: disc !important;
+}

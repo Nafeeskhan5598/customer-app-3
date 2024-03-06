@@ -1,0 +1,11 @@
+.chart-container {
+    display: none; /* Hide all charts by default */
+  }
+  
+  .chart-container.show {
+    display: block; /* Show the chart with id 1 */
+  }
+  
+  .chart-container.hide {
+    display: none; /* Hide charts with ids other than 1 */
+  }

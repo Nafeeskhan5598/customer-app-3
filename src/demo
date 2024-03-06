@@ -1,0 +1,28 @@
+    tooltipOrange={<TooltipDark />}
+
+    TODO
+      <VisitAddressContact
+                        contactIcon={faBookmark}
+                        flateHeading="Looking for buy Residential Apartment"
+                        userName="virat kohli"
+                        flateAddress="Others/Gurgaon"
+                        Price="1 Cr - 3 Cr"
+                        Size=" 2000 - 3000 Sq. Ft."
+                        dateTime="22-jan-2023  2:47 PM"
+                        VisitePannel="Initiated"
+                        userDate="5-march-2023"
+                        ContactNewBtn={<ContactNewBtn
+                            contactStatus="New"
+                            newBtnBorder=" 2px solid #39b6ff"
+                            newBtnColor="#39b6ff"
+                        />}
+                        tooltipOrange={<TooltipDark />}
+                    /> 
+
+TODO
+                    <span className="relative top-4">
+                        <FontAwesomeIcon style={{ fontSize: 'xx-large ' }} icon={faBullseye} />
+                    </span>
+                    <h2>All Opportunities</h2>
+                    <p className="text-sm relative top-neg-8">Opportunity Management (or sales pipline management) is the process of tracking potential salese as they move through your pipline.</p>
+                    {/* <span className="todo-all-text">Search and view your task from here</span> */}
