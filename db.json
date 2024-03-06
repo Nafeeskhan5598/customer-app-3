@@ -1,0 +1,1363 @@
+
+{
+  "dashboard": {
+    "cards": [
+      {
+        "id": 1,
+        "heading": "Total Leads",
+        "progressbarColor": "#fc3a3b",
+        "progressbarValue": "30",
+        "value": "29",
+        "textColor": "#f00",
+        "colorValue": "80",
+        "strokeDasharray": "122"
+      },
+      {
+        "id": 2,
+        "heading": "Closed Leads",
+        "progressbarColor": "#65e9a5",
+        "progressbarValue": "60",
+        "value": "33",
+        "textColor": "#f00",
+        "colorValue": "80",
+        "strokeDasharray": "155"
+      },
+      {
+        "id": 3,
+        "heading": "Hot Leads",
+        "progressbarColor": "#0EA8FF",
+        "progressbarValue": "80",
+        "value": "60",
+        "textColor": "#f00",
+        "colorValue": "80",
+        "strokeDasharray": "177"
+      }
+    ],
+    "timeDurations": [
+      {
+        "id": 1,
+        "durationHeading": "Average Lead Duration",
+        "durationValue": "5 Days"
+      },
+      {
+        "id": 2,
+        "durationHeading": "Average Sales Duration",
+        "durationValue": "10 Days"
+      },
+      {
+        "id": 3,
+        "durationHeading": "Total Proposal sent",
+        "durationValue": "0 Days"
+      },
+      {
+        "id": 4,
+        "durationHeading": "Total Campaigns",
+        "durationValue": "0 Days"
+      }
+    ],
+    "funnelCharts": [
+      {
+        "id": 1,
+        "leadsValue": 1000,
+        "followUpValue": 800,
+        "officeVisiteValue": 500,
+        "siteVisiteValue": 200,
+        "disqualifiedValue": 250,
+        "closedValue": 100
+      }
+    ],
+    "rockLineChart": [
+      {
+        "id": 1,
+        "LIneData": [
+          {
+            "line": [
+              10,
+              50,
+              35,
+              40,
+              10,
+              30,
+              30
+            ],
+            "secondLine": [
+              30,
+              40,
+              35,
+              40,
+              30,
+              50,
+              35
+            ],
+            "thirdLine": [
+              50,
+              40,
+              50,
+              40,
+              30,
+              50,
+              45
+            ]
+          }
+        ]
+      }
+    ],
+    "progressBar": [
+      {
+        "id": 1,
+        "progressValue": {
+          "firstProgress": 50,
+          "secondProgress": 80
+        }
+      }
+    ],
+    "calendar": {
+      "events": [
+        {
+          "id": 1,
+          "name": "nafees"
+        }
+      ]
+    },
+    "Leads": {
+      "BarCharts": [
+        {
+          "id": 1,
+          "BarData": [
+            {
+              "BarChartFirst": [
+                120,
+                180,
+                10,
+                130,
+                10,
+                60,
+                200,
+                40,
+                20,
+                200
+              ],
+              "BarChartSecond": [
+                120,
+                180,
+                10,
+                130,
+                10,
+                60,
+                200,
+                40,
+                20,
+                200
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allContacts": {
+    "timeDurationsContact": [
+      {
+        "id": 1,
+        "durationHeading": "Total Contacts",
+        "durationValue": "1546"
+      },
+      {
+        "id": 2,
+        "durationHeading": "Today Contacts",
+        "durationValue": "5"
+      },
+      {
+        "id": 3,
+        "durationHeading": "Shortlisted Contacts",
+        "durationValue": "0"
+      }
+    ],
+    "userContacts": [
+      {
+        "id": 0,
+        "UserImgs": "img/user-1.jpg",
+        "UserName": "Pravin rajput",
+        "DateTime": "28 Aug 1975",
+        "MobileNumber": 7562162759,
+        "UserEmail": "nafees@gmail.com",
+        "ByUser": "Paras",
+        "UserDateAndTime": "2 jan 2024 5: 30"
+      },
+      {
+        "id": 1,
+        "UserImgs": "img/user-3.jpg",
+        "UserName": "Shishupal Rajput",
+        "DateTime": "5 jan 2024",
+        "MobileNumber": 9823345468,
+        "UserEmail": "nafees@gmail.com",
+        "ByUser": "Paras",
+        "UserDateAndTime": "2 jan 2024 5: 30"
+      },
+      {
+        "id": 2,
+        "UserImgs": "img/user-4.jpg",
+        "UserName": "Chetan Beragi",
+        "DateTime": "5 jan 2024",
+        "MobileNumber": 9610968586,
+        "UserEmail": "nafees@gmail.com",
+        "ByUser": "Paras",
+        "UserDateAndTime": "2 jan 2024 5: 30"
+      },
+      {
+        "id": 3,
+        "UserImgs": "img/user-5.jpg",
+        "UserName": "Sachin Rathod",
+        "DateTime": "5 jan 2024",
+        "MobileNumber": 9610968586,
+        "UserEmail": "nafees@gmail.com",
+        "ByUser": "Paras",
+        "UserDateAndTime": "2 jan 2024 5: 30"
+      },
+      {
+        "id": 4,
+        "UserImgs": "img/user-1.jpg",
+        "UserName": "Balram Yadav",
+        "DateTime": "5 jan 2024",
+        "MobileNumber": 9610968586,
+        "UserEmail": "nafees@gmail.com",
+        "ByUser": "Paras",
+        "UserDateAndTime": "2 jan 2024 5: 30"
+      },
+      {
+        "id": 5,
+        "UserImgs": "img/user-3.jpg",
+        "UserName": "Nihal Verma",
+        "DateTime": "5 jan 2024",
+        "MobileNumber": 9610968586,
+        "UserEmail": "nafees@gmail.com",
+        "ByUser": "Paras",
+        "UserDateAndTime": "2 jan 2024 5: 30"
+      },
+      {
+        "id": 6,
+        "UserImgs": "img/user-4.jpg",
+        "UserName": "Jaiprakash Sing",
+        "DateTime": "5 jan 2024",
+        "MobileNumber": 9610968586,
+        "UserEmail": "nafees@gmail.com",
+        "ByUser": "Paras",
+        "UserDateAndTime": "2 jan 2024 5: 30"
+      }
+    ]
+  },
+  "Leads": {
+    "timeDurationsLeads": [
+      {
+        "id": 1,
+        "durationHeading": "Total Contacts",
+        "durationValue": 8274
+      },
+      {
+        "id": 2,
+        "durationHeading": "Total Leads",
+        "durationValue": 50
+      }
+    ],
+    "contactsDataMyLeads": [
+      {
+        "id": 0,
+        "UserImgs": "img/user-1.jpg",
+        "userName": "virat kohli",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "9610968587",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 1,
+        "UserImgs": "img/user-2.jpg",
+        "userName": "Sanjana Sharma",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "8890300787",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 2,
+        "UserImgs": "img/user-3.jpg",
+        "userName": "Paras Kohli",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "9784285345",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 3,
+        "UserImgs": "img/user-4.jpg",
+        "userName": "virat kohli",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "9610968587",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 4,
+        "UserImgs": "img/user-5.jpg",
+        "userName": "Chetan Beragi",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "7878458945",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 5,
+        "UserImgs": "img/user-1.jpg",
+        "userName": "Sams Chouhan",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "9610968587",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      }
+    ],
+    "barChartFirst": [
+      {
+        "id": 1,
+        "barChartFirstValue": [
+          20,
+          50,
+          35,
+          20,
+          10,
+          30,
+          50,
+          20,
+          10,
+          40
+        ],
+        "barChartSecondValue": [
+          30,
+          40,
+          40,
+          40,
+          10,
+          10,
+          50,
+          30,
+          10,
+          30
+        ],
+        "barChartThirdValue": [
+          40,
+          50,
+          35,
+          10,
+          40,
+          30,
+          50,
+          50,
+          10,
+          50
+        ]
+      }
+    ],
+    "timeDurationsFollowLeads": [
+      {
+        "id": 1,
+        "durationHeading": "Total Contacts",
+        "durationValue": "1546"
+      },
+      {
+        "id": 2,
+        "durationHeading": "Shortlisted Contacts",
+        "durationValue": "0"
+      }
+    ],
+    "contactsDataFollowLeads": [
+      {
+        "id": 0,
+        "UserImgs": "img/user-1.jpg",
+        "userName": "virat kohli",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "9610968587",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 1,
+        "UserImgs": "img/user-2.jpg",
+        "userName": "Sanjivni Sharma",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "97842853443",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 2,
+        "UserImgs": "img/user-3.jpg",
+        "userName": "Sams Chouhan",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "8890300788",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      }
+    ],
+    "barChartFirstFollowLeads": [
+      {
+        "id": 1,
+        "barChartFirstValue": [
+          20,
+          50,
+          35,
+          20,
+          10,
+          30,
+          50,
+          20,
+          10,
+          40
+        ],
+        "barChartSecondValue": [
+          30,
+          40,
+          40,
+          40,
+          10,
+          10,
+          50,
+          30,
+          10,
+          30
+        ],
+        "barChartThirdValue": [
+          40,
+          50,
+          35,
+          10,
+          40,
+          30,
+          50,
+          50,
+          10,
+          50
+        ]
+      }
+    ],
+    "timeDurationsOpenLeads": [
+      {
+        "id": 1,
+        "durationHeading": "Total Contacts",
+        "durationValue": "1546"
+      },
+      {
+        "id": 2,
+        "durationHeading": "Shortlisted Contacts",
+        "durationValue": "0"
+      }
+    ],
+    "contactsDataOpenLeads": [
+      {
+        "id": 0,
+        "UserImgs": "img/user-1.jpg",
+        "userName": "virat kohli",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "9610968587",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 1,
+        "UserImgs": "img/user-2.jpg",
+        "userName": "Sanjivni Sharma",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "9610968587",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 2,
+        "UserImgs": "img/user-3.jpg",
+        "userName": "Ankit Rathor",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "9610968587",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 3,
+        "UserImgs": "img/user-4.jpg",
+        "userName": "Rahul Gupta",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "9610968587",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      }
+    ],
+    "barChartFirstOpenLeads": [
+      {
+        "id": 1,
+        "barChartFirstValue": [
+          20,
+          50,
+          35,
+          20,
+          10,
+          30,
+          50,
+          20,
+          10,
+          40
+        ],
+        "barChartSecondValue": [
+          30,
+          40,
+          40,
+          40,
+          10,
+          10,
+          50,
+          30,
+          10,
+          30
+        ],
+        "barChartThirdValue": [
+          40,
+          50,
+          35,
+          10,
+          40,
+          30,
+          50,
+          50,
+          10,
+          50
+        ]
+      }
+    ],
+    "timeDurationsAllLeads": [
+      {
+        "id": 1,
+        "durationHeading": "Total Contacts",
+        "durationValue": "1546"
+      },
+      {
+        "id": 2,
+        "durationHeading": "Shortlisted Contacts",
+        "durationValue": "0"
+      }
+    ],
+    "contactsDataAllLeads": [
+      {
+        "id": 0,
+        "UserImgs": "img/user-1.jpg",
+        "userName": "Ankit Rathor",
+        "dateTime": "22-feb-2024  10:47 PM",
+        "mobileNumber": "9784285355",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "15-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 1,
+        "UserImgs": "img/user-2.jpg",
+        "userName": "Ankita kohli",
+        "dateTime": "10-jan-2024  10:47 PM",
+        "mobileNumber": "8890300787",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "01-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 2,
+        "UserImgs": "img/user-3.jpg",
+        "userName": "Rahul Gupta",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "9610968587",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 3,
+        "UserImgs": "img/user-4.jpg",
+        "userName": "vikas jain",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "9610968587",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      }
+    ],
+    "barChartFirstAllLeads": [
+      {
+        "id": 1,
+        "barChartFirstValue": [
+          20,
+          50,
+          35,
+          20,
+          10,
+          30,
+          50,
+          20,
+          10,
+          40
+        ],
+        "barChartSecondValue": [
+          30,
+          40,
+          40,
+          40,
+          10,
+          10,
+          50,
+          30,
+          10,
+          30
+        ],
+        "barChartThirdValue": [
+          40,
+          50,
+          35,
+          10,
+          40,
+          30,
+          50,
+          50,
+          10,
+          50
+        ]
+      }
+    ],
+    "timeDurationsBacklogLeads": [
+      {
+        "id": 1,
+        "durationHeading": "Total Contacts",
+        "durationValue": "1546"
+      },
+      {
+        "id": 2,
+        "durationHeading": "Shortlisted Contacts",
+        "durationValue": "0"
+      }
+    ],
+    "contactsDataBacklogLeads": [
+      {
+        "id": 0,
+        "UserImgs": "img/user-1.jpg",
+        "userName": "virat kohli",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "9610968587",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 1,
+        "UserImgs": "img/user-2.jpg",
+        "userName": "Sanjivni Sharma",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "9610968587",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 2,
+        "UserImgs": "img/user-3.jpg",
+        "userName": "virat kohli",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "9610968587",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      },
+      {
+        "id": 3,
+        "UserImgs": "img/user-4.jpg",
+        "userName": "virat kohli",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "mobileNumber": "9610968587",
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "positionLeft": "-0.5rem",
+          "contactStatus": "New",
+          "newBtnBorder": "2px solid #39b6ff",
+          "newBtnColor": "#39b6ff"
+        }
+      }
+    ],
+    "barChartFirstBacklogLeads": [
+      {
+        "id": 1,
+        "barChartFirstValue": [
+          20,
+          50,
+          35,
+          20,
+          10,
+          30,
+          50,
+          20,
+          10,
+          40
+        ],
+        "barChartSecondValue": [
+          30,
+          40,
+          40,
+          40,
+          10,
+          10,
+          50,
+          30,
+          10,
+          30
+        ],
+        "barChartThirdValue": [
+          40,
+          50,
+          35,
+          10,
+          40,
+          30,
+          50,
+          50,
+          10,
+          50
+        ]
+      }
+    ]
+  },
+  "Opportunity": {
+    "contactsDataMyOpportunity": [
+      {
+        "id": 1,
+        "faBookmark": "faBookmark",
+        "flateHeading": "Looking for by 1 BHK residential",
+        "userName": "virat kohli",
+        "flateAddress": "Sector 61-Gurgaon, Sector 65-Gurgaon",
+        "Price": "1 Cr - 1.5 Cr",
+        "Size": "600 - 700 Sq. Ft.",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "VisitePannel": "Inspection[Site Visit Planned-1]",
+        "mobileNumber": 9610968587,
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "contactStatus": "In progress",
+          "newBtnBorder": "2px solid #898888",
+          "newBtnColor": "#898888"
+        }
+      },
+      {
+        "id": 2,
+        "faBookmark": "faBookmark",
+        "flateHeading": "Looking for by 1 BHK residential",
+        "userName": "virat kohli",
+        "flateAddress": "Sector 61-Gurgaon, Sector 65-Gurgaon",
+        "Price": "1 Cr - 1.5 Cr",
+        "Size": "600 - 700 Sq. Ft.",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "VisitePannel": "Inspection[Site Visit Planned-1]",
+        "mobileNumber": 9610968587,
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "contactStatus": "In progress",
+          "newBtnBorder": "2px solid #898888",
+          "newBtnColor": "#898888"
+        }
+      }
+    ],
+    "timeDurationsMyOpportunity": [
+      {
+        "id": 1,
+        "durationHeading": "Total Contacts",
+        "durationValue": "1546"
+      },
+      {
+        "id": 2,
+        "durationHeading": "Shortlisted Contacts",
+        "durationValue": "0"
+      }
+    ],
+    "barChartFirstMyOpportunity": [
+      {
+        "id": 1,
+        "barChartFirstValue": [
+          20,
+          50,
+          35,
+          20,
+          10,
+          30,
+          50,
+          20,
+          10,
+          40
+        ],
+        "barChartSecondValue": [
+          30,
+          40,
+          40,
+          40,
+          10,
+          10,
+          50,
+          30,
+          10,
+          30
+        ],
+        "barChartThirdValue": [
+          40,
+          50,
+          35,
+          10,
+          40,
+          30,
+          50,
+          50,
+          10,
+          50
+        ]
+      }
+    ],
+    "contactsDataFollowOpportunity": [
+      {
+        "id": 1,
+        "faBookmark": "faBookmark",
+        "flateHeading": "Looking for by 1 BHK residential",
+        "userName": "virat kohli",
+        "flateAddress": "Sector 61-Gurgaon, Sector 65-Gurgaon",
+        "Price": "1 Cr - 1.5 Cr",
+        "Size": "600 - 700 Sq. Ft.",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "VisitePannel": "Inspection[Site Visit Planned-1]",
+        "mobileNumber": 9610968587,
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "contactStatus": "In progress",
+          "newBtnBorder": "2px solid #898888",
+          "newBtnColor": "#898888"
+        }
+      },
+      {
+        "id": 2,
+        "faBookmark": "faBookmark",
+        "flateHeading": "Looking for by 1 BHK residential",
+        "userName": "virat kohli",
+        "flateAddress": "Sector 61-Gurgaon, Sector 65-Gurgaon",
+        "Price": "1 Cr - 1.5 Cr",
+        "Size": "600 - 700 Sq. Ft.",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "VisitePannel": "Inspection[Site Visit Planned-1]",
+        "mobileNumber": 9610968587,
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "contactStatus": "In progress",
+          "newBtnBorder": "2px solid #898888",
+          "newBtnColor": "#898888"
+        }
+      }
+    ],
+    "timeDurationsFollowOpportunity": [
+      {
+        "id": 1,
+        "durationHeading": "Total Contacts",
+        "durationValue": "1546"
+      },
+      {
+        "id": 2,
+        "durationHeading": "Shortlisted Contacts",
+        "durationValue": "0"
+      }
+    ],
+    "barChartFirstFollowOpportunity": [
+      {
+        "id": 1,
+        "barChartFirstValue": [
+          20,
+          50,
+          35,
+          20,
+          10,
+          30,
+          50,
+          20,
+          10,
+          40
+        ],
+        "barChartSecondValue": [
+          30,
+          40,
+          40,
+          40,
+          10,
+          10,
+          50,
+          30,
+          10,
+          30
+        ],
+        "barChartThirdValue": [
+          40,
+          50,
+          35,
+          10,
+          40,
+          30,
+          50,
+          50,
+          10,
+          50
+        ]
+      }
+    ],
+    "timeDurationsOpenOpportunity": [
+      {
+        "id": 1,
+        "durationHeading": "Total Contacts",
+        "durationValue": "1546"
+      },
+      {
+        "id": 2,
+        "durationHeading": "Shortlisted Contacts",
+        "durationValue": "0"
+      }
+    ],
+    "contactsDataOpenOpportunity": [
+      {
+        "id": 1,
+        "faBookmark": "faBookmark",
+        "flateHeading": "Looking for by 1 BHK residential",
+        "userName": "virat kohli",
+        "flateAddress": "Sector 61-Gurgaon, Sector 65-Gurgaon",
+        "Price": "1 Cr - 1.5 Cr",
+        "Size": "600 - 700 Sq. Ft.",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "VisitePannel": "Inspection[Site Visit Planned-1]",
+        "mobileNumber": 9610968587,
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "contactStatus": "In progress",
+          "newBtnBorder": "2px solid #898888",
+          "newBtnColor": "#898888"
+        }
+      }
+    ],
+    "barChartFirstOpenOpportunity": [
+      {
+        "id": 1,
+        "barChartFirstValue": [
+          30,
+          10,
+          35,
+          20,
+          10,
+          30,
+          50,
+          20,
+          10,
+          40
+        ],
+        "barChartSecondValue": [
+          30,
+          40,
+          40,
+          10,
+          10,
+          10,
+          50,
+          30,
+          10,
+          30
+        ],
+        "barChartThirdValue": [
+          40,
+          50,
+          35,
+          10,
+          40,
+          30,
+          50,
+          50,
+          10,
+          50
+        ]
+      }
+    ],
+    "timeDurationsAllOpportunity": [
+      {
+        "id": 1,
+        "durationHeading": "Total Contacts",
+        "durationValue": "15"
+      },
+      {
+        "id": 2,
+        "durationHeading": "Shortlisted Contacts",
+        "durationValue": "0"
+      }
+    ],
+    "contactsDataAllOpportunity": [
+      {
+        "id": 1,
+        "faBookmark": "faBookmark",
+        "flateHeading": "Looking for by 1 BHK residential",
+        "userName": "virat kohli",
+        "flateAddress": "Sector 61-Gurgaon, Sector 65-Gurgaon",
+        "Price": "1 Cr - 1.5 Cr",
+        "Size": "600 - 700 Sq. Ft.",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "VisitePannel": "Inspection[Site Visit Planned-1]",
+        "mobileNumber": 9610968587,
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "contactStatus": "In progress",
+          "newBtnBorder": "2px solid #898888",
+          "newBtnColor": "#898888"
+        }
+      }
+    ],
+    "barChartFirstAllOpportunity": [
+      {
+        "id": 1,
+        "barChartFirstValue": [
+          10,
+          10,
+          35,
+          20,
+          10,
+          30,
+          50,
+          20,
+          10,
+          40
+        ],
+        "barChartSecondValue": [
+          30,
+          40,
+          40,
+          10,
+          10,
+          10,
+          50,
+          30,
+          10,
+          30
+        ],
+        "barChartThirdValue": [
+          40,
+          50,
+          35,
+          10,
+          40,
+          30,
+          50,
+          50,
+          10,
+          50
+        ]
+      }
+    ],
+    "timeDurationsBacklogOpportunity": [
+      {
+        "id": 1,
+        "durationHeading": "Total Contacts",
+        "durationValue": "20"
+      },
+      {
+        "id": 2,
+        "durationHeading": "Shortlisted Contacts",
+        "durationValue": "0"
+      }
+    ],
+    "contactsDataBacklogOpportunity": [
+      {
+        "id": 1,
+        "faBookmark": "faBookmark",
+        "flateHeading": "Looking for by 1 BHK residential",
+        "userName": "virat kohli",
+        "flateAddress": "Sector 61-Gurgaon, Sector 65-Gurgaon",
+        "Price": "1 Cr - 1.5 Cr",
+        "Size": "600 - 700 Sq. Ft.",
+        "dateTime": "20-jan-2024  10:47 PM",
+        "VisitePannel": "Inspection[Site Visit Planned-1]",
+        "mobileNumber": 9610968587,
+        "byUser": "Paras Ranjan",
+        "userDateAndTime": "10-jan-2024",
+        "userDate": "5-Feb-2023",
+        "webDomain": "google.com",
+        "tooltipSmall": "Cold",
+        "tooltipBigg": "Housing.com",
+        "ContactNewBtn": {
+          "contactStatus": "In progress",
+          "newBtnBorder": "2px solid #898888",
+          "newBtnColor": "#898888"
+        }
+      }
+    ],
+    "barChartFirstBacklogOpportunity": [
+      {
+        "id": 1,
+        "barChartFirstValue": [
+          10,
+          10,
+          35,
+          20,
+          10,
+          30,
+          50,
+          20,
+          10,
+          40
+        ],
+        "barChartSecondValue": [
+          30,
+          40,
+          40,
+          10,
+          10,
+          10,
+          50,
+          30,
+          10,
+          30
+        ],
+        "barChartThirdValue": [
+          40,
+          50,
+          35,
+          10,
+          40,
+          30,
+          50,
+          50,
+          10,
+          50
+        ]
+      }
+    ]
+  }
+}

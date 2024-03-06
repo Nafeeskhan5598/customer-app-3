@@ -1,0 +1,121 @@
+{
+  "dashboard": {
+    "cards": [
+      {
+        "id": 1,
+        "heading": "Contact",
+        "progressbarColor": "#fc3a3b",
+        "progressbarValue": "30",
+        "value": "29",
+        "textColor": "#f00"
+      },
+      {
+        "id": 2,
+        "heading": "Leads",
+        "progressbarColor": "#65e9a5",
+        "progressbarValue": "33",
+        "value": "33",
+        "textColor": "#f00"
+      },
+      {
+        "id": 3,
+        "heading": "Opportunity",
+        "progressbarColor": "#0EA8FF",
+        "progressbarValue": "60",
+        "value": "60",
+        "textColor": "#f00"
+      },
+      {
+        "id": 4,
+        "heading": "Won",
+        "progressbarColor": "#fc3a3b",
+        "progressbarValue": "20",
+        "value": "20",
+        "textColor": "#f00"
+      }
+    ],
+    "timeDurations": [
+      {
+        "id": 1,
+        "durationHeading": "Average Lead Duration",
+        "durationValue": "5 Days"
+      },
+      {
+        "id": 2,
+        "durationHeading": "Average Sales Duration",
+        "durationValue": "10 Days"
+      },
+      {
+        "id": 3,
+        "durationHeading": "Total Proposal sent",
+        "durationValue": "0 Days"
+      },
+      {
+        "id": 4,
+        "durationHeading": "Total Campaigns",
+        "durationValue": "0 Days"
+      }
+    ],
+    "funnelCharts": [
+      {
+        "id": 1,
+        "inquiryValue": 1000,
+        "applicantsValue": 2000,
+        "admitsValue": 500,
+        "depositsValue": 200
+      },
+      {
+        "id": 2,
+        "inquiryValue": 1500,
+        "applicantsValue": 800,
+        "admitsValue": 500,
+        "depositsValue": 200
+      }
+    ],
+    "rockLineChart": [
+      {
+        "id": 1,
+        "LIneData": [
+          {
+            "line": [
+              10,
+              50,
+              35,
+              40,
+              10,
+              30,
+              30
+            ],
+            "secondLine": [
+              30,
+              40,
+              35,
+              40,
+              30,
+              50,
+              35
+            ],
+            "thirdLine": [
+              50,
+              40,
+              50,
+              40,
+              30,
+              50,
+              45
+            ]
+          }
+        ]
+      }
+    ],
+    "progressBar": [
+      {
+        "id": 1,
+        "progressValue": {
+          "firstProgress": 50,
+          "secondProgress": 80
+        }
+      }
+    ]
+  }
+}
