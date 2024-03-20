@@ -244,6 +244,22 @@
         "ByUser": "Paras",
         "UserDateAndTime": "2 jan 2024 5: 30"
       }
+    ], 
+    "contactConvertLead" : [
+      {
+        "id": 0,
+        "remarkAddress" : "Interested in OMR Crown,Sector 106,residential,3BHK,new-projects for [18865392]",
+        "assignTo" : "Paras Ranjan",
+        "planedDate" : "12-Mar-2024 12:53 PM",
+        "status" : "New"
+      },
+      {
+        "id": 1,
+        "remarkAddress" : "Interested in OMR Crown,Sector 106,residential,3BHK,new-projects for [18865392]",
+        "assignTo" : "Paras Ranjan",
+        "planedDate" : "12-Mar-2024 12:53 PM",
+        "status" : "New"
+      }
     ]
   },
   "Leads": {
@@ -684,6 +700,7 @@
         "webDomain": "google.com",
         "tooltipSmall": "Cold",
         "tooltipBigg": "Housing.com",
+        "favoriteUser": [],
         "ContactNewBtn": {
           "positionLeft": "-0.5rem",
           "contactStatus": "New",

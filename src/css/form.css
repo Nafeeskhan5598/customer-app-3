@@ -1,0 +1,247 @@
+/* YourFormComponent.css */
+
+.create-contact-all-area {
+  padding-top: 3rem;
+  width: 90%;
+}
+
+.form-heading {
+  text-align: center;
+}
+
+.input-dropdown {
+  display: flex;
+  max-width: 985px;
+  margin: auto;
+  padding-bottom: 17px;
+  /* padding: 1rem; */
+}
+
+.email-btn {
+  cursor: pointer;
+}
+
+.form-search {
+  width: 77%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 2px solid #ededed;
+  font-size: 11px;
+  padding: 8px 8px;
+  /* border-radius: 6px; */
+  color: #a3a3a3;
+  outline: none;
+  height: 40px !important;
+}
+
+.your-form-container {
+  max-width: 985px;
+  margin: auto;
+}
+
+
+.form-control {
+  margin-bottom: 15px;
+  width: 100%;
+  display: flex;
+
+}
+
+.label-name {
+  display: block;
+  margin-bottom: 5px;
+  position: relative;
+  font-weight: 700;
+  color: #8b8a8a;
+  width: 16%;
+  font-size: small;
+}
+
+.input-area {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ededed;
+  color: #a1a1a1;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  font-size: 11px;
+  padding: 8px 8px;
+  /* border-radius: 6px; */
+}
+
+.submit-button {
+  background-color: #4caf50;
+  /* Green */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+  /* Darker green on hover */
+}
+
+.form-btn {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 0.4rem;
+  justify-content: center;
+}
+
+.from-radio-btn {
+  display: flex;
+  padding-left: 23%;
+  padding-bottom: 1rem;
+  gap: 2rem;
+}
+
+.form-email {
+  display: flex;
+}
+
+.email-input {
+  width: 60%;
+  position: relative;
+  padding: 8px;
+  left: -10px;
+}
+
+.email-btn-area {
+  width: 30%;
+}
+
+.email-btn {
+  padding: 8px 49px;
+  width: 100%;
+  color: white;
+  background: #8f8f8f !important;
+  border: none;
+
+}
+
+.text-area-input {
+  display: flex;
+  padding-bottom: 15px;
+}
+
+.cancle-btn {
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  background: #8f8f8f !important;
+  /* padding: 0px 10px; */
+}
+
+.cancle-btn-Contact {
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  background: hsl(125, 86%, 72%) !important;
+  /* padding: 0px 10px;/ */
+}
+
+.continue-btn {
+  font-weight: 500;
+}
+
+.stepper-wrapper {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: -50%;
+  z-index: 2;
+}
+
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 2;
+}
+
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 6px;
+}
+
+.stepper-item.active {
+  font-weight: bold;
+}
+
+.step-counter {
+  color: white;
+}
+
+.stepper-item.completed .step-counter {
+  background-color: #4bb543;
+
+}
+
+.stepper-item.completed::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #4bb543;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 3;
+}
+
+.stepper-item:first-child::before {
+  content: none;
+}
+
+.stepper-item:last-child::after {
+  content: none;
+}
+
+#myTextarea {
+  padding: 9px 9px;
+  border: 2px solid #ededed;
+  /* border-radius: 10px; */
+  font-size: 11px;
+}
+
+.stepper-item.progress-color {
+  background-color: blue;
+}
+
+.stepper-item.progress-color.completed {
+  background-color: green;
+}
