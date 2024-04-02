@@ -1,6 +1,7 @@
 import React from "react";
 import Dropdown from "../../field/Dropdown";
 import InputLogo from "../../field/InputLogo";
+import SubmitCancelBtn from "../../button/SubmitCancelBtn";
 // import SpanTxt from "../../common/SpanTxt";
 // import { faCompass, faMobile, faPhone, faSearch, faVoicemail } from "@fortawesome/free-solid-svg-icons";
 // import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
@@ -37,7 +38,7 @@ function AddvanceSearchForm() {
 
                 <div className="input-dropdown">
                     <label className="label-name !text-[x-small]">Customer Type</label>
-                    <label className=" !w-[88%] !rounded-none text-center">
+                    <label className=" !w-[85%] !rounded-none text-center">
                         <Dropdown  {...dropdownProps}
                             dropOp2='Red'
                             dropOp3='Orange'
@@ -50,7 +51,7 @@ function AddvanceSearchForm() {
 
                 <div className="input-dropdown">
                     <label className="label-name !text-[x-small]">Contact Type</label>
-                    <label className=" !w-[88%] !rounded-none text-center">
+                    <label className=" !w-[85%] !rounded-none text-center">
                         <Dropdown  {...dropdownProps}
                             dropOp2='Red'
                             dropOp3='Orange'
@@ -66,8 +67,7 @@ function AddvanceSearchForm() {
                     <div className='w-[100%] flex justify-end h-[2.7rem]'>
                         <InputLogo
                             inputWidth="98%"
-                            // inputLogo={faPhone}
-                            inputTypes="number"
+                            inputTypes="tel"
                             inputPlaceholder="10 Digit Mobile"
                         />
                     </div>
@@ -79,7 +79,7 @@ function AddvanceSearchForm() {
                         <InputLogo
                             inputWidth="98%"
                             // inputLogo={faPhone}
-                            inputTypes="number"
+                            inputTypes="tel"
                             inputPlaceholder="Other contact number"
                         />
                     </div>
@@ -90,7 +90,6 @@ function AddvanceSearchForm() {
                     <div className='w-[100%] flex justify-end h-[2.7rem]'>
                         <InputLogo
                             inputWidth="98%"
-                            // inputLogo={faEnvelope}
                             inputTypes="email"
                             inputPlaceholder="Enter email"
                         />
@@ -101,7 +100,7 @@ function AddvanceSearchForm() {
 
                 <div className="input-dropdown">
                     <label className="label-name !text-[x-small]">CIty</label>
-                    <label className=" !w-[88%] !rounded-none text-center">
+                    <label className=" !w-[85%] !rounded-none text-center">
                         <Dropdown  {...dropdownProps}
                             dropOp2='Red'
                             dropOp3='Orange'
@@ -113,7 +112,7 @@ function AddvanceSearchForm() {
                 </div>
                 <div className="input-dropdown">
                     <label className="label-name !text-[x-small]">Source</label>
-                    <label className=" !w-[88%] !rounded-none text-center">
+                    <label className=" !w-[85%] !rounded-none text-center">
                         <Dropdown  {...dropdownProps}
                             dropOp2='Red'
                             dropOp3='Orange'
@@ -124,72 +123,7 @@ function AddvanceSearchForm() {
                     </label>
                 </div>
 
-                <div className="form-control form-btn">
-                    <label></label>
-                    <button type="submit" >SUBMIT</button>
-                    <button type="button" className="cancle-btn">CANCEL</button>
-                </div>
-                {/* <div className="input-dropdown">
-                    <label className="label-name !text-[x-small]">Pollution Color Zone</label>
-                    <label className=" !w-[88%] !rounded-none text-center">
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
-                            dropHeading="Select"
-                            dropOp1='Select'
-                            dropOp2='Red'
-                            dropOp3='Orange'
-                            dropOp4='Yellow'
-                            dropOp5='Green'
-
-                        />
-                    </label>
-                </div> */}
-                {/* <div className="input-dropdown">
-                    <label className="label-name !text-[x-small]">Pollution Color Zone</label>
-                    <label className=" !w-[88%] !rounded-none text-center">
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
-                            dropHeading="Select"
-                            dropOp1='Select'
-                            dropOp2='Red'
-                            dropOp3='Orange'
-                            dropOp4='Yellow'
-                            dropOp5='Green'
-
-                        />
-                    </label>
-                </div> */}
-
-
-                {/* <div className="input-dropdown">
-                    <label className="label-name !text-[x-small]" >Canopy Details(Length-Width)</label>
-                    <div className='w-[100%] flex justify-end h-[2.7rem]'>
-                        <InputLogo
-                            inputWidth="48%"
-                            inputLogo={faCompass}
-                            inputTypes="number"
-                        />
-                        <SpanTxt
-                            spanTxtWidth="6%"
-                            spanText="_"
-                        />
-                        <InputLogo
-                            inputWidth="48%"
-                            inputLogo={faCompass}
-                            inputTypes="number"
-                        />
-                    </div>
-                </div> */}
+                    <SubmitCancelBtn submitName="SUBMIT" cancelName="CANCEL" />
             </div>
         </>
     )

@@ -10,7 +10,7 @@ function FormValidation(Props) {
     email: ''
 }
 
-const {  handleChange, values, errors} = useFormik({
+const {  handleChange,  errors} = useFormik({
     initialValues: formInitialValues,
     validationSchema: EmailSchema,          
     onSubmit: (values) => {
@@ -44,9 +44,9 @@ const {  handleChange, values, errors} = useFormik({
                             }}
                             type={Props.inputType}
                             name={Props.inputName}
-                            // name="name"
                             placeholder={Props.placeholder}
                             onChange={handleChange}
+                            pattern={Props.pattern}
                         />
                         <br />
                         <br />

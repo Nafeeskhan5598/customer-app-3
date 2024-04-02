@@ -4,6 +4,7 @@ import RadioBtn from '../../button/RadioBtn';
 import CheckRectangle from '../../button/CheckRectangle';
 import PageHeading from '../../common/PageHeading';
 import SubmitCancelBtn from '../../button/SubmitCancelBtn';
+import createPropertyDrop from '../../js/DropdownVarible';
 
 function CreateLeadSubForm() {
 
@@ -23,13 +24,8 @@ function CreateLeadSubForm() {
                     <PageHeading pageHeading="Lets Started  with some basic detail"></PageHeading>
 
                     <div className="input-dropdown">
-                        <label className="label-name" > Source </label> <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%;'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Source"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropSearch="search"
@@ -42,13 +38,8 @@ function CreateLeadSubForm() {
                     </div>
 
                     <div className="input-dropdown">
-                        <label className="label-name" > Branch </label> <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%;'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Branch "
                             dropHeading="Select"
                             dropOp1='Select'
                             dropSearch="search"
@@ -61,13 +52,8 @@ function CreateLeadSubForm() {
                     </div>
 
                     <div className="input-dropdown">
-                        <label className="label-name" > Assignee </label> <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%;'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Assignee"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropSearch="search"

@@ -44,7 +44,7 @@ function AllLeadsSub() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:3001/Leads");
+                const response = await axios.get(`${process.env.REACT_APP_VARIABLE_APIURL}/Leads`);
                 setDashboardData(response.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
@@ -56,6 +56,7 @@ function AllLeadsSub() {
         fetchData();
         const storedFavoriteUser = localStorage.getItem('favoriteUser');
         if (storedFavoriteUser) {
+            console.log(storedFavoriteUser);
             setFavoriteUser(JSON.parse(storedFavoriteUser));
             setIsLeadFavoritVisible(true);
         }
@@ -366,8 +367,11 @@ function AllLeadsSub() {
             }
         });
 
-        setIsLeadFavoritVisible(!isLeadFavoritVisible);
-        setFavoriteUser(!isLeadFavoritVisible, favoriteUser ? contactId : null)
+        // setIsLeadFavoritVisible(!isLeadFavoritVisible);
+        // setFavoriteUser(!isLeadFavoritVisible, favoriteUser ? contactId : null)
+        console.log(contactsDataAllLeads[id]);
+                contactsDataAllLeads[id].isFavoriteUser = !contactsDataAllLeads[id].isFavoriteUser
+
 
         // Save the favorite user ID in local storages     
     }
@@ -437,7 +441,8 @@ function AllLeadsSub() {
 
                                 />}
                                 // isLeadFavoritVisible={contact.id === favoriteUser}
-                                isLeadFavoritVisible={selectedContacts.includes(contact.id)}
+                                // isLeadFavoritVisible={selectedContacts.includes(contact.id)}
+                                isLeadFavoritVisible={contact.isFavoriteUser}
                             />
                         }
                     </For>

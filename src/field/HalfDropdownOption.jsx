@@ -30,7 +30,7 @@ function HalfDropdown(Props) {
     <>
       <div className="relative" style={{ width: Props.drodownWidth }}>
         <select
-          className="dropdown-content input-dropdown w-full  text-{!#b3b3b3} bg-none border  shadow-sm outline-none  selected"
+          className="dropdown-content input-dropdown w-full  text-{!#b3b3b3} bg-none border  shadow-sm outline-none "
           style={{
             
             background: Props.dropBg,

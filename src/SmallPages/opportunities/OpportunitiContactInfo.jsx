@@ -2,6 +2,7 @@ import React  from 'react';
 import Dropdown from "../../field/Dropdown";
 import ContinueCancelNewBtn from '../../button/ContinueCancelNewBtn';
 import PageHeading from '../../common/PageHeading';
+import createPropertyDrop from '../../js/DropdownVarible';
 
 function OpportunitiContactInfo({ onContinueClick }) {
 
@@ -12,13 +13,8 @@ function OpportunitiContactInfo({ onContinueClick }) {
                     <PageHeading pageHeading="Give us customer information about opportunity" />
                     <div className="your-form-container">
                         <div className="input-dropdown">
-                            <label className="label-name" > Folder </label> <Dropdown
-                                dropBg="#ffffff"
-                                dropWidth='100%;'
-                                dropFont='11px'
-                                dropPadding='10px 0px'
-                                dropColor='#686868'
-                                drodownWidth='100%'
+                            <Dropdown {...createPropertyDrop[0]}
+                           labelName=" Folder"
                                 dropHeading="Select"
                                 dropOp1='Select'
                                 dropSearch="search"

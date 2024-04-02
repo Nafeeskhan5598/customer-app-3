@@ -57,43 +57,7 @@ function Properties() {
         setActionDisplay(prevDisplay => (prevDisplay === 'none' ? 'block' : 'none'));
     };
 
-    // const [showSubForm, setShowSubForm] = useState(true);
-    // const [showSecForm, setShowSecForm] = useState(false);
-    // const [showThirdForm, setShowThirdForm] = useState(false);
-    // const [showForForm, setShowForForm] = useState(false);
-    // const [showFivForm, setShowFiveForm] = useState(false);
-    // const [showSixForm, setShowSixForm] = useState(false)
-
-
-    // const handleContinueClick = () => {
-    //     setShowSubForm(false);
-    //     setShowSecForm(true);
-    // };
-
-    // const onContinueClickSec = () => {
-    //     setShowSecForm(false);
-    //     setShowThirdForm(true);
-    // };
-    // const onContinueClickThird = () => {
-    //     setShowThirdForm(false);
-    //     setShowForForm(true);
-    // }
-    // const onContinueClickFor = () => {
-    //     setShowForForm(false);
-    //     setShowFiveForm(true);
-    // }
-    // const onContinueClickFive = () => {
-    //     setShowFiveForm(false);
-    //     setShowSixForm(true);
-
-    // }
-
-    // const onContinueClickSix = (e) => {
-    //     window.alert('Your form is successfully submitted');
-
-    //     setShowSixForm(false);
-    //     setShowSubForm(true);
-    // };
+   
 
     const [currentStep, setCurrentStep] = useState(1);
 

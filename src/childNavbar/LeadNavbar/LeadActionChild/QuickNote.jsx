@@ -2,6 +2,8 @@ import React from 'react';
 import FormHeading from '../../../SubComponents/formSub/FormHeading';
 import TextAreaInput from '../../../field/TextAreaInput';
 import Dropdown from '../../../field/Dropdown';
+import createPropertyDrop from '../../../js/DropdownVarible';
+
 
 function QuickNote(props) {
     return (
@@ -13,13 +15,8 @@ function QuickNote(props) {
                 headingValue={props.headingValue}   //"7676"
             />
             <div className="input-dropdown ">
-                <label className="label-name" > Custumer Type</label> <Dropdown
-                    dropBg="#ffffff"
-                    dropWidth='100%'
-                    dropFont='11px'
-                    dropPadding='10px 0px'
-                    dropColor='#686868'
-                    drodownWidth='100%'
+                <Dropdown {...createPropertyDrop[0]}
+                labelName="Custumer Type"
                     dropHeading="Select"
                     dropOp1='Select'
                     dropOp2='Customer Comments'

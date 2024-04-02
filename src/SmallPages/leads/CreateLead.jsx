@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TextAreaInput from "../../field/TextAreaInput";
 import FormValidation from "../../ChildComponents/FormValidation";
 import ProgressColor from "../../progress/ProgressColor";
-import HalfDropdown from '../../field/HalfDropdown';
+import HalfDropdown from '../../field/HalfDropdownOption';
 import PageHeading from '../../common/PageHeading';
 import ContinueCancelNewBtn from '../../button/ContinueCancelNewBtn';
 

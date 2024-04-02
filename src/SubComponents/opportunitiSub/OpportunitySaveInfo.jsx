@@ -1,14 +1,16 @@
-import React  from 'react';
+import React from 'react';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faUser, faPerson, faClock, faEarth } from '@fortawesome/free-solid-svg-icons';
 import Dropdown from "../../field/Dropdown";
 import RadioBtn from '../../button/RadioBtn';
 import CheckRectangle from '../../button/CheckRectangle';
 import PageHeading from '../../common/PageHeading';
+import createPropertyDrop from '../../js/DropdownVarible';
+import SubmitCancelBtn from '../../button/SubmitCancelBtn';
 
 function OpportunitySaveInfo({ onContinueClickFor, handleSubmit, currentStep }) {
 
- 
+
     return (
 
         <>
@@ -16,20 +18,15 @@ function OpportunitySaveInfo({ onContinueClickFor, handleSubmit, currentStep }) 
             <form action="" onSubmit={handleSubmit}>
                 <div className="create-lead-area p-8">
                     <PageHeading pageHeading="Great ! Lets save and Publish the opportunity" />
-                    
+
                     <div className="input-dropdown">
                         <label className="label-name" > Keyword</label>
                         <input type="text" className='box-border border border-solid border-gray-300 bg-white w-full text-xs p-2 rounded-md' />
                     </div>
 
                     <div className="input-dropdown">
-                        <label className="label-name" > Refer By</label> <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Refer By"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Initiated'
@@ -41,13 +38,8 @@ function OpportunitySaveInfo({ onContinueClickFor, handleSubmit, currentStep }) 
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Folder</label> <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Folder"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Initiated'
@@ -59,13 +51,8 @@ function OpportunitySaveInfo({ onContinueClickFor, handleSubmit, currentStep }) 
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Source</label> <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Source"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Initiated'
@@ -77,13 +64,8 @@ function OpportunitySaveInfo({ onContinueClickFor, handleSubmit, currentStep }) 
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Branch</label> <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Branch"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Initiated'
@@ -95,13 +77,8 @@ function OpportunitySaveInfo({ onContinueClickFor, handleSubmit, currentStep }) 
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Assignee</label> <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Assignee"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Initiated'
@@ -179,11 +156,7 @@ function OpportunitySaveInfo({ onContinueClickFor, handleSubmit, currentStep }) 
                             </div>
                         </div>
                     </div>
-                    <div className="form-control form-btn">
-                        <label></label>
-                        <button type="submit" className='continue-btn' onClick={onContinueClickFor}>CONTINUE</button>
-                        <button type="button" className="cancle-btn">CANCEL</button>
-                    </div>
+                    <SubmitCancelBtn submitName="CONTINUE" onContinueClick={onContinueClickFor} cancelName="CANCEL" />
                 </div>
             </form>
         </>

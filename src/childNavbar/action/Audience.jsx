@@ -2,6 +2,7 @@ import React from "react";
 import FormHeading from "../../SubComponents/formSub/FormHeading";
 import FormValidation from "../../ChildComponents/FormValidation";
 import Dropdown from "../../field/Dropdown";
+import createPropertyDrop from "..//..//js/DropdownVarible";
 
 function Audience(props) {
   return (
@@ -29,13 +30,8 @@ function Audience(props) {
 
 
         <div className="input-dropdown ">
-          <label className="label-name" >Type</label> <Dropdown
-            dropBg="#ffffff"
-            dropWidth='100%'
-            dropFont='11px'
-            dropPadding='10px 0px'
-            dropColor='#686868'
-            drodownWidth='100%'
+          <Dropdown  {...createPropertyDrop[0]}
+          labelName="Type"
             dropHeading="Select"
             dropOp1='Select'
             dropOp2='Email'
@@ -49,13 +45,8 @@ function Audience(props) {
         </div>
 
         <div className="input-dropdown ">
-          <label className="label-name" > Tamplate</label> <Dropdown
-            dropBg="#ffffff"
-            dropWidth='100%'
-            dropFont='11px'
-            dropPadding='10px 0px'
-            dropColor='#686868'
-            drodownWidth='100%'
+           <Dropdown {...createPropertyDrop[0]}
+          labelName="Tamplate"
             dropHeading="Select"
             dropOp1='Select'
           // dropOp2='On demand'
@@ -69,13 +60,8 @@ function Audience(props) {
         </div>
 
         <div className="input-dropdown ">
-          <label className="label-name" > Schedule</label> <Dropdown
-            dropBg="#ffffff"
-            dropWidth='100%'
-            dropFont='11px'
-            dropPadding='10px 0px'
-            dropColor='#686868'
-            drodownWidth='100%'
+           <Dropdown {...createPropertyDrop[0]}
+          labelName="Schedule"
             dropHeading="Select"
             dropOp1='Select'
             dropOp2='On demand'

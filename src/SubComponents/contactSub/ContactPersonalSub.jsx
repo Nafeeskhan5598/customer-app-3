@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import Dropdown from "../../field/Dropdown";
 import EmailBtn from "../../button/EmailBtn";
 import TextAreaInput from "../../field/TextAreaInput";
-// import FormValidation from "../../ChildComponents/FormValidation";
 import PageHeading from "../../common/PageHeading";
 import ToInputField from "../../field/ToInputField";
-// import InputLogo from "../../field/InputLogo";
 import FormValidation from "../../ChildComponents/FormValidation";
+import InputMobile from "../../field/InputMobile";
+import HalfDropdown from "../../field/HalfDropdownOption";
+import createPropertyDrop from "../../js/DropdownVarible";
+import SubmitCancelBtn from "../../button/SubmitCancelBtn";
+
 
 function ContactPersonalSub(createContactHeading) {
     const [email, setEmail] = useState('');
@@ -45,6 +48,7 @@ function ContactPersonalSub(createContactHeading) {
         setMobileNumberError(''); // Clear any previous error message when the user types
     };
 
+
     const [completedStepsForth, setcompletedStepsForth] = useState(0);
     const handleContinueForth = () => {
         // Update completedSteps when CONTINUE button is clicked
@@ -59,6 +63,7 @@ function ContactPersonalSub(createContactHeading) {
         setShowSuccessMessage(true);
     };
 
+
     return (
 
         <>
@@ -70,14 +75,11 @@ function ContactPersonalSub(createContactHeading) {
                         <div className="information-icons-area">
                             <div>
                                 <div className="form-all-area">
-                                    <div className="form-heading pb-4">
-                                        <h3>Lets Started  with some basic detail</h3>
-                                    </div>
-
+                                    <PageHeading pageHeading="Lets Started  with some basic detail" />
                                     <ToInputField
                                         labelName="name"
                                         placeholderFist="First Name"
-                                        firstName='name'
+                                        firstName='email'
                                         placeholderSecond="Last Name"
                                         secondName='name'
                                     />
@@ -119,12 +121,7 @@ function ContactPersonalSub(createContactHeading) {
                                     <div className="input-dropdown">
                                         <label className="label-name" > Mobile</label>
                                         <div className="flex w-full">
-                                            <Dropdown
-                                                dropBg="#ffffff"
-                                                dropWidth='100%'
-                                                dropFont='11px'
-                                                dropPadding='10px 0px'
-                                                dropColor='#686868'
+                                            <HalfDropdown {...createPropertyDrop[0]}
                                                 drodownWidth='12%'
                                                 dropHeading="Select"
                                                 dropOp1='India +91'
@@ -132,31 +129,21 @@ function ContactPersonalSub(createContactHeading) {
                                                 dropOp3='+71'
                                                 dropOp4='+78'
                                                 dropOp5='+70'
-
                                             />
 
-                                            <input
-                                                type="tel"
-                                                pattern="[0-9]{10}"
-                                                id="phoneNumber"
-                                                required
-                                                className="form-search !w-[88%]"
-                                                placeholder="10-Digit Mobile"
-                                                value={mobileNumber}
-                                                onChange={handleChangeMobileNumber}
-                                            />
+                                            < InputMobile value={mobileNumber} onChange={handleChangeMobileNumber} />
+
                                         </div>
                                         {mobileNumberError && <div style={{ color: 'red' }}>{mobileNumberError}</div>}
-
-
                                     </div>
 
                                     <div className="your-form-container">
                                         < FormValidation
-                                            // FormOnSubmit="loginHandle"
+                                            inputType="tel"
+                                            pattern="[0-9]{10}"
                                             labelName="Other Number"
                                             placeholder="Other contact number"
-                                            inputName="other_number"
+                                            inputName="othernumber"
                                             labelWidth="100% !important"
                                         />
                                     </div>
@@ -189,13 +176,8 @@ function ContactPersonalSub(createContactHeading) {
 
                                     {errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>}
                                     <div className="input-dropdown">
-                                        <label className="label-name" > City</label> <Dropdown
-                                            dropBg="#ffffff"
-                                            dropWidth='100%'
-                                            dropFont='11px'
-                                            dropPadding='10px 0px'
-                                            dropColor='#686868'
-                                            drodownWidth='100%'
+                                        <Dropdown  {...createPropertyDrop[0]}
+                                            labelName="City"
                                             dropHeading="Select"
                                             dropOp1='Select'
                                             dropOp2='Mrs'
@@ -207,13 +189,8 @@ function ContactPersonalSub(createContactHeading) {
 
 
                                     <div className="input-dropdown">
-                                        <label className="label-name" > Source</label> <Dropdown
-                                            dropBg="#ffffff"
-                                            dropWidth='100%'
-                                            dropFont='11px'
-                                            dropPadding='10px 0px'
-                                            dropColor='#686868'
-                                            drodownWidth='100%'
+                                        <Dropdown  {...createPropertyDrop[0]}
+                                            labelName="Source"
                                             dropHeading="Select"
                                             dropOp1='Select'
                                             dropOp2='Mrs'
@@ -222,12 +199,7 @@ function ContactPersonalSub(createContactHeading) {
                                             dropOp5='Mr'
                                         />
                                     </div>
-
-                                    <div className="form-control form-btn">
-                                        <label></label>
-                                        <button type="submit" onClick={handleContinueForth}>SUBMIT</button>
-                                        <button type="submit" className="cancle-btn">CANCLE</button>
-                                    </div>
+                                    <SubmitCancelBtn submitName="SUBMIT" onContinueClick={handleContinueForth} cancelName="CANCLE"  />
                                     {showSuccessMessage && (
                                         <div className="success-message">
                                             Your form is successfully submitted

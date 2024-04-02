@@ -5,7 +5,7 @@ function SearchBtn() {
     return (
         <>
             <div className="search-btn p-0">
-                <button type="submit">Search</button>
+                <button type="submit">SEARCH</button>
             </div>
         </>
     )

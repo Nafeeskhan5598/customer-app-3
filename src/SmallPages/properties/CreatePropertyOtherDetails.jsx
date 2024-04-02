@@ -6,6 +6,9 @@ import InputLogo from '../../field/InputLogo';
 import SpanTxt from '../../common/SpanTxt';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import PageHeading from '../../common/PageHeading';
+import SubmitCancelBtn from '../../button/SubmitCancelBtn';
+import HalfDropdown from '../../field/HalfDropdownOption';
+import createPropertyDrop from '../../js/DropdownVarible';
 
 function CreatePropertyOtherDetails({ onContinueClick }) {
 
@@ -134,13 +137,7 @@ function CreatePropertyOtherDetails({ onContinueClick }) {
                     <div className="input-dropdown">
                         <label className="label-name !w-[14%] !text-[x-small]">Flooring</label>
                         <label className=" !w-[88%] !rounded-none text-center">
-                            <Dropdown
-                                dropBg="#ffffff"
-                                dropWidth='100%'
-                                dropFont='11px'
-                                dropPadding='10px 0px'
-                                dropColor='#686868'
-                                drodownWidth='100%'
+                            <Dropdown {...createPropertyDrop[0]}
                                 dropHeading="Select"
                                 dropOp1='Select'
                                 dropOp2='Marble'
@@ -179,13 +176,7 @@ function CreatePropertyOtherDetails({ onContinueClick }) {
                     <div className="input-dropdown">
                         <label className="label-name !w-[14%] !text-[x-small]">Facing</label>
                         <label className=" !w-[88%] !rounded-none text-center">
-                            <Dropdown
-                                dropBg="#ffffff"
-                                dropWidth='100%'
-                                dropFont='11px'
-                                dropPadding='10px 0px'
-                                dropColor='#686868'
-                                drodownWidth='100%'
+                            <Dropdown {...createPropertyDrop[0]}
                                 dropHeading="Select"
                                 dropOp1='Select'
                                 dropOp2='North'
@@ -201,13 +192,7 @@ function CreatePropertyOtherDetails({ onContinueClick }) {
                     <div className="input-dropdown">
                         <label className="label-name !w-[14%] !text-[x-small]">Amenities</label>
                         <label className=" !w-[88%] !rounded-none text-center">
-                            <Dropdown
-                                dropBg="#ffffff"
-                                dropWidth='100%'
-                                dropFont='11px'
-                                dropPadding='10px 0px'
-                                dropColor='#686868'
-                                drodownWidth='100%'
+                            <Dropdown {...createPropertyDrop[0]}
                                 dropHeading="Select"
                                 dropOp1='Select'
                                 dropOp2='24/7 Security'
@@ -222,13 +207,7 @@ function CreatePropertyOtherDetails({ onContinueClick }) {
                     <div className="input-dropdown">
                         <label className="label-name !w-[14%] !text-[x-small]">Advertisement</label>
                         <label className=" !w-[88%] !rounded-none text-center">
-                            <Dropdown
-                                dropBg="#ffffff"
-                                dropWidth='100%'
-                                dropFont='11px'
-                                dropPadding='10px 0px'
-                                dropColor='#686868'
-                                drodownWidth='100%'
+                            <Dropdown {...createPropertyDrop[0]}
                                 dropHeading="Select"
                                 dropOp1='Select'
                                 dropOp2='99acres.com'
@@ -248,13 +227,7 @@ function CreatePropertyOtherDetails({ onContinueClick }) {
                                 <label className="label-name !w-[14%] !text-[x-small]" >Age Of Property</label>
                                 <div className='flex w-[88%] justify-between'>
                                     <div className='w-[60%] flex '>
-                                        <Dropdown
-                                            dropBg="#ffffff"
-                                            dropWidth='100%'
-                                            dropFont='11px'
-                                            dropPadding='10px 0px'
-                                            dropColor='#686868'
-                                            drodownWidth='100%'
+                                        <HalfDropdown {...createPropertyDrop[0]}
                                             dropHeading="Select"
                                             dropOp1='Select'
                                             dropOp2='Under Construction'
@@ -267,13 +240,7 @@ function CreatePropertyOtherDetails({ onContinueClick }) {
                                     </div>
                                     <div className='w-[30%]'>
                                         <label className=" !w-[48%] !rounded-none text-center">
-                                            <Dropdown
-                                                dropBg="#ffffff"
-                                                dropWidth='100%'
-                                                dropFont='11px'
-                                                dropPadding='10px 0px'
-                                                dropColor='#686868'
-                                                drodownWidth='100%'
+                                            <HalfDropdown {...createPropertyDrop[0]}
                                                 dropHeading="Select"
                                                 dropOp1='Select'
                                                 dropOp2='Only family'
@@ -293,13 +260,7 @@ function CreatePropertyOtherDetails({ onContinueClick }) {
                                 <label className="label-name !w-[14%] !text-[x-small]" >Availability/Possession</label>
                                 <div className='flex w-[88%]'>
                                     <div className='w-[60%] flex justify-end'>
-                                        <Dropdown
-                                            dropBg="#ffffff"
-                                            dropWidth='100%'
-                                            dropFont='11px'
-                                            dropPadding='10px 0px'
-                                            dropColor='#686868'
-                                            drodownWidth='100%'
+                                        <HalfDropdown {...createPropertyDrop[0]}
                                             dropHeading="Select"
                                             dropOp1='Select'
                                             dropOp2='Immediately/Ready to move'
@@ -436,13 +397,7 @@ function CreatePropertyOtherDetails({ onContinueClick }) {
                             <div className="input-dropdown">
                                 <label className="label-name !w-[14%] !text-[x-small]">Pollution Color Zone</label>
                                 <label className=" !w-[88%] !rounded-none text-center">
-                                    <Dropdown
-                                        dropBg="#ffffff"
-                                        dropWidth='100%'
-                                        dropFont='11px'
-                                        dropPadding='10px 0px'
-                                        dropColor='#686868'
-                                        drodownWidth='100%'
+                                    <Dropdown {...createPropertyDrop[0]}
                                         dropHeading="Select"
                                         dropOp1='Select'
                                         dropOp2='Red'
@@ -545,11 +500,7 @@ function CreatePropertyOtherDetails({ onContinueClick }) {
 
                             </div>
 
-                            <div className="form-control form-btn">
-                                <label></label>
-                                <button type="submit" className='continue-btn' onClick={onContinueClick}>CONTINUE</button>
-                                <button type="button" className="cancle-btn">CANCEL</button>
-                            </div>
+                            <SubmitCancelBtn submitName="CONTINUE" cancelName="CANCEL" onContinueClick={onContinueClick} />
                         </div>
                     </div>
                 </div>

@@ -34,7 +34,7 @@ function BacklogLeadsSub() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:3001/Leads");
+                const response = await axios.get(`${process.env.REACT_APP_VARIABLE_APIURL}/Leads`);
                 setDashboardData(response.data);
             } catch (error) {
                 console.error("Error fetching data:", error);

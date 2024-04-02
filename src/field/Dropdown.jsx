@@ -31,6 +31,7 @@ function Dropdown(Props) {
 
   return (
     <>
+     <label className="label-name" > {Props.labelName}</label>
       <div className="relative" style={{ width: Props.drodownWidth }}>
         <select
           className="dropdown-content input-dropdown w-full  text-{!#b3b3b3} bg-none border  shadow-sm outline-none"
@@ -47,14 +48,7 @@ function Dropdown(Props) {
           value={formik.values.dropdownValue}
           name="dropdownValue"
         >
-          {/* <input type="search" placeholder="Search.." id="myInput" onKeyUp="filterFunction()"></input> */}
-          {/* <input
-            className="flex items-center h-8 px-3 text-sm border-b border-black hover:bg-gray-200 focus:outline-none"
-            type="search"
-            name=""
-            id=""
-            placeholder="Search…"
-          /> */}
+     
           <option>{Props.dropOp1}</option>
           <option>{Props.dropOp2}</option>
           <option>{Props.dropOp3}</option>

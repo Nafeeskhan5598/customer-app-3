@@ -22,7 +22,7 @@ function OpportunityBacklogSub() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:3001/Opportunity");
+                const response = await axios.get(`${process.env.REACT_APP_VARIABLE_APIURL}/Opportunity`);
                 setDashboardData(response.data);
             } catch (error) {
                 console.error("Error fetching data:", error);

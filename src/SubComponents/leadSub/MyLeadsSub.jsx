@@ -34,7 +34,7 @@ function MyLeadsSub() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:3001/Leads");
+                const response = await axios.get(`${process.env.REACT_APP_VARIABLE_APIURL}/Leads`);
                 setDashboardData(response.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
@@ -92,6 +92,8 @@ function MyLeadsSub() {
     const handleToggleAudienceVisibility = () => {
         setOpenAudienceItem(!isOpenAudienceItem);
         setIsContentVisible(!isContentVisible);
+        setIsUserSaveInfoVisible(!isUserSaveInfoVisible);
+        
     };
 
     const [isGroupDeleteItem, setGroupDeleteItem] = useState(false);
@@ -99,6 +101,7 @@ function MyLeadsSub() {
     const handleToggleGroupDeleteVisibility = () => {
         setGroupDeleteItem(!isGroupDeleteItem);
         setIsContentVisible(!isContentVisible);
+        setIsUserSaveInfoVisible(!isUserSaveInfoVisible);
     };
 
 
@@ -107,6 +110,7 @@ function MyLeadsSub() {
     const handleToggleGroupEmailVisibility = () => {
         setGroupEmailItem(!isGroupEmailItem);
         setIsContentVisible(!isContentVisible);
+          setIsUserSaveInfoVisible(!isUserSaveInfoVisible);
     };
 
     const [isExportContact, setExportContact] = useState(false);

@@ -5,6 +5,8 @@ import Dropdown from "../../field/Dropdown";
 import GoogleMaps from '../../map/GoogleMaps';
 import FormValidation from '..//..//ChildComponents/FormValidation';
 import PageHeading from '../../common/PageHeading';
+import SubmitCancelBtn from '../../button/SubmitCancelBtn';
+import createPropertyDrop from '../../js/DropdownVarible';
 
 function CreatePropertiesLocation({ onContinueClick }) {
 
@@ -31,18 +33,11 @@ function CreatePropertiesLocation({ onContinueClick }) {
                         </div> */}
 
                         <GoogleMaps  />   
-                        {/* //selectedLocation={setSelectedLocation} */}
 
                         <div className='pb-4'>
-
                             <div className="input-dropdown ">
-                                <label className="label-name" > Address</label> <Dropdown
-                                    dropBg="#ffffff"
-                                    dropWidth='100%'
-                                    dropFont='11px'
-                                    dropPadding='10px 0px'
-                                    dropColor='#686868'
-                                    drodownWidth='100%'
+                                <Dropdown {...createPropertyDrop[0]}
+                                  labelName="Address"
                                     dropHeading="Select"
                                     dropOp1='Select'
                                     dropOp2='Sale'
@@ -105,13 +100,8 @@ function CreatePropertiesLocation({ onContinueClick }) {
                                 <div className='text-[#bbb8b8]'>Maximum 50 character allowed</div>
                             </div>
                             <div className="input-dropdown ">
-                                <label className="label-name" > Building / Tower / Project</label> <Dropdown
-                                    dropBg="#ffffff"
-                                    dropWidth='100%'
-                                    dropFont='11px'
-                                    dropPadding='10px 0px'
-                                    dropColor='#686868'
-                                    drodownWidth='100%'
+                                <Dropdown {...createPropertyDrop[0]}
+                                   labelName="Building / Tower / Project"
                                     dropHeading="Select"
                                     dropOp1='Select'
                                     dropOp2='Sale'
@@ -159,13 +149,8 @@ function CreatePropertiesLocation({ onContinueClick }) {
                                 inputName="user name"
                             />
                              <div className="input-dropdown ">
-                                <label className="label-name" > City</label> <Dropdown
-                                    dropBg="#ffffff"
-                                    dropWidth='100%'
-                                    dropFont='11px'
-                                    dropPadding='10px 0px'
-                                    dropColor='#686868'
-                                    drodownWidth='100%'
+                                <Dropdown {...createPropertyDrop[0]}
+                                  labelName="City"
                                     dropHeading="Select"
                                     dropOp1='Select'
                                     dropOp2='Sale'
@@ -178,13 +163,8 @@ function CreatePropertiesLocation({ onContinueClick }) {
                                 />
                             </div>
                             <div className="input-dropdown ">
-                                <label className="label-name" > Locality</label> <Dropdown
-                                    dropBg="#ffffff"
-                                    dropWidth='100%'
-                                    dropFont='11px'
-                                    dropPadding='10px 0px'
-                                    dropColor='#686868'
-                                    drodownWidth='100%'
+                                <Dropdown {...createPropertyDrop[0]}
+                                labelName="Locality"
                                     dropHeading="Select"
                                     dropOp1='Select'
                                     dropOp2='Sale'
@@ -197,16 +177,7 @@ function CreatePropertiesLocation({ onContinueClick }) {
                                 />
                             </div>
 
-                            <div className="form-control form-btn">
-                                <label></label>
-                                <button type="submit" className='continue-btn' onClick={onContinueClick}>CONTINUE</button>
-                                <button type="button" className="cancle-btn">CANCEL</button>
-                                {/* <button type="button" className="cancle-btn-Contact">
-                                    <span>
-                                        <FontAwesomeIcon icon={faUser} />
-                                    </span>
-                                    ADD NEW CONTACT</button> */}
-                            </div>
+                            <SubmitCancelBtn submitName="CONTINUE" cancelName="CANCEL" onContinueClick={onContinueClick} />
                         </div>
                     </div>
                 </div>

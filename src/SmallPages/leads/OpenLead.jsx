@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Footer from "../../components/Footer";
 import MenuPages from "../../components/MenuPages";
 import { GlobalInfo } from '../../pages/Dashboard'; 
-// import MyLeadsSub from "..//..//SubComponents/leadSub/MyLeadsSub";
 import OpenLeadSub from "../../SubComponents/leadSub/OpenLeadSub";
 import NavArea from "../../components/NavArea";
 import { toggleMenuWidth } from '..//..//js/Util';

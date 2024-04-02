@@ -13,7 +13,8 @@ function ChangeStatus(props) {
                 headingValue={props.headingValue}   //"7676"
             />
             <div className="input-dropdown ">
-                <label className="label-name" > Tamplate</label> <Dropdown
+                 <Dropdown
+                 labelName="Tamplate"
                     dropBg="#ffffff"
                     dropWidth='100%'
                     dropFont='11px'

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Dropdown from "../../field/Dropdown";
 import TextAreaInput from "../../field/TextAreaInput";
 import PageHeading from '../../common/PageHeading';
+import createPropertyDrop from '../../js/DropdownVarible';
+import SubmitCancelBtn from '../../button/SubmitCancelBtn';
 
 function OpportunitySchedul({ onContinueClick, currentStep }) {
 
@@ -45,13 +47,8 @@ function OpportunitySchedul({ onContinueClick, currentStep }) {
                     <PageHeading pageHeading="Plan next followup for opportunity" />
 
                     <div className="input-dropdown">
-                        <label className="label-name" > For</label> <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="For"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Initiated'
@@ -81,7 +78,7 @@ function OpportunitySchedul({ onContinueClick, currentStep }) {
 
                     <div className="input-dropdown">
 
-                        <label className="label-name" > Request Date</label>
+                        <label className="label-name"> Request Date</label>
                         <input
                             type='date'
                             className="form-search !w-[50%]"
@@ -96,11 +93,7 @@ function OpportunitySchedul({ onContinueClick, currentStep }) {
                             onChange={(e) => setSelectedTime(e.target.value)}
                         />
                     </div>
-                    <div className="form-control form-btn">
-                        <label></label>
-                        <button type="submit" className='continue-btn' onClick={onContinueClick}>CONTINUE</button>
-                        <button type="button" className="cancle-btn">CANCEL</button>
-                    </div>
+                    <SubmitCancelBtn submitName="CONTINUE" onContinueClick={onContinueClick} cancelName="CANCEL" />
                 </div>
             </form>
         </>

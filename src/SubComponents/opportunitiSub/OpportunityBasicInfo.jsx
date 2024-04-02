@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Dropdown from "../../field/Dropdown";
 import TextAreaInput from "../../field/TextAreaInput";
 import PageHeading from '../../common/PageHeading';
+import HalfDropdown from '../../field/HalfDropdownOption';
+import createPropertyDrop from '../../js/DropdownVarible';
+import SubmitCancelBtn from '../../button/SubmitCancelBtn';
 
 function OpportunityBasicInfo({ onContinueClick, currentStep }) {
 
@@ -24,7 +27,7 @@ function OpportunityBasicInfo({ onContinueClick, currentStep }) {
     return (
 
         <>
-        {/* onSubmit={handleSubmit} */}
+            {/* onSubmit={handleSubmit} */}
             <form action="" >
                 <div className="create-lead-area p-8">
                     <PageHeading pageHeading="Give us Some information basic requiments" />
@@ -32,24 +35,19 @@ function OpportunityBasicInfo({ onContinueClick, currentStep }) {
 
                         <label className="label-name" > Request Date</label>
                         <div className='flex w-full'>
-                        <input
-                            type='date'
-                            className="form-search !w-[35%] responsive-date"
-                            value={selectedDate}
-                            onChange={(e) => setSelectedDate(e.target.value)}
-                        />
-                        <label className="form-search !w-[30%] bg-[#efefef]">Est Close Date</label>
-                        <input type="date" className="form-search !w-[35%] responsive-date" placeholder="First Name" />
+                            <input
+                                type='date'
+                                className="form-search !w-[35%] responsive-date"
+                                value={selectedDate}
+                                onChange={(e) => setSelectedDate(e.target.value)}
+                            />
+                            <label className="form-search !w-[30%] bg-[#efefef]">Est Close Date</label>
+                            <input type="date" className="form-search !w-[35%] responsive-date" placeholder="First Name" />
                         </div>
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > For</label> <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="For"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Buy'
@@ -58,18 +56,12 @@ function OpportunityBasicInfo({ onContinueClick, currentStep }) {
                             dropOp5='Re-Development'
                             dropOp6='Joint Ventures'
                             dropOp7='Services'
-                        
+
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Looking For</label> <Dropdown
-
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <label className="label-name" > Looking For</label> 
+                        <HalfDropdown {...createPropertyDrop[0]}
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Mrs'
@@ -80,74 +72,54 @@ function OpportunityBasicInfo({ onContinueClick, currentStep }) {
                     </div>
                     <div className="input-dropdown">
                         <label className="label-name" > Budget</label>
-                        <div className='flex w-full'>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='47%'
-                            dropHeading="Select"
-                            dropOp1='Select'
-                            dropOp2='Mrs'
-                            dropOp3='Ms'
-                            dropOp4='Miss'
-                            dropOp5='Mr'
-                        />
-                        <label className="form-search !w-[6%] bg-[#efefef]">to</label>
 
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='47%'
-                            dropHeading="Select"
-                            dropOp1='Select'
-                            dropOp2='Mrs'
-                            dropOp3='Ms'
-                            dropOp4='Miss'
-                            dropOp5='Mr'
-                        />
-                    </div>
+                        <div className='flex w-full'>
+                            <HalfDropdown {...createPropertyDrop[0]}
+                                drodownWidth='47%'
+                                dropHeading="Select"
+                                dropOp1='Select'
+                                dropOp2='Mrs'
+                                dropOp3='Ms'
+                                dropOp4='Miss'
+                                dropOp5='Mr'
+                            />
+                            <label className="form-search !w-[6%] bg-[#efefef]">to</label>
+
+                            <HalfDropdown {...createPropertyDrop[0]}
+                                drodownWidth='47%'
+                                dropHeading="Select"
+                                dropOp1='Select'
+                                dropOp2='Mrs'
+                                dropOp3='Ms'
+                                dropOp4='Miss'
+                                dropOp5='Mr'
+                            />
+                        </div>
                     </div>
                     <div className="input-dropdown">
                         <label className="label-name" > Area </label>
                         <div className='flex w-full'>
-                        <label className="form-search !w-[23%]">0.00</label>
-                        <label className="form-search !w-[6%] bg-[#efefef]">to</label>
-                        <label className="form-search !w-[24%]">0.00</label>
-                     
+                            <label className="form-search !w-[23%]">0.00</label>
+                            <label className="form-search !w-[6%] bg-[#efefef]">to</label>
+                            <label className="form-search !w-[24%]">0.00</label>
 
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='47%'
-                            dropHeading="Select"
-                            dropOp1='Select'
-                            dropOp2='Sq.Ft.'
-                            dropOp3='Sq.Meter'
-                            dropOp4='Ground'
-                            dropOp5='Aankadam'
-                            dropOp6='Rood'
-                            dropOp7='Chataks'
-                        />
-                           </div>
+
+                            <HalfDropdown {...createPropertyDrop[0]}
+                                drodownWidth='47%'
+                                dropHeading="Select"
+                                dropOp1='Select'
+                                dropOp2='Sq.Ft.'
+                                dropOp3='Sq.Meter'
+                                dropOp4='Ground'
+                                dropOp5='Aankadam'
+                                dropOp6='Rood'
+                                dropOp7='Chataks'
+                            />
+                        </div>
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > City</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="City"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Mrs'
@@ -157,14 +129,8 @@ function OpportunityBasicInfo({ onContinueClick, currentStep }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Locality</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Locality"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Mrs'
@@ -174,14 +140,8 @@ function OpportunityBasicInfo({ onContinueClick, currentStep }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Bedroom</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Bedroom"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Mrs'
@@ -191,14 +151,8 @@ function OpportunityBasicInfo({ onContinueClick, currentStep }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Furnishing</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Furnishing"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Full Furnished'
@@ -211,14 +165,8 @@ function OpportunityBasicInfo({ onContinueClick, currentStep }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Transaction</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Transaction"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Mrs'
@@ -228,14 +176,8 @@ function OpportunityBasicInfo({ onContinueClick, currentStep }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Purpose/Preferences</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Purpose/Preferences"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Mrs'
@@ -245,14 +187,8 @@ function OpportunityBasicInfo({ onContinueClick, currentStep }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Property Age</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Property Age"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Under Construction'
@@ -289,11 +225,8 @@ function OpportunityBasicInfo({ onContinueClick, currentStep }) {
                         <label className="label-name" ></label>
                         <div className='text-[#bbb8b8]'>Maximum 2000 character allowed</div>
                     </div>
-                    <div className="form-control form-btn">
-                        <label></label>
-                        <button type="submit" className='continue-btn' onClick={onContinueClick}>CONTINUE</button>
-                        <button type="button" className="cancle-btn">CANCEL</button>
-                    </div>
+
+                    <SubmitCancelBtn submitName="CONTINUE" onContinueClick={onContinueClick} cancelName="CANCEL" />
                 </div>
             </form>
         </>

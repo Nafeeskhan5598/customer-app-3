@@ -27,6 +27,10 @@ import axios from "axios";
 import OrderShortBtn from "../../button/OrderShortBtn";
 import UserProfile from "../../common/UserProfile";
 import { For } from "million/react";
+import SearchBtn from "../../button/SearchBtn";
+import PageHeading from "../../common/PageHeading";
+import SubmitCancelBtn from "../../button/SubmitCancelBtn";
+import createPropertyDrop from "..//..//js/DropdownVarible";
 // import History from "../../childNavbar/action/History";
 
 function AllContactSub(Props, timeDuration, index) {
@@ -37,7 +41,7 @@ function AllContactSub(Props, timeDuration, index) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:3001/allContacts");
+                const response = await axios.get(`${process.env.REACT_APP_VARIABLE_APIURL}/allContacts`);
                 setDashboardData(response.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
@@ -259,6 +263,7 @@ function AllContactSub(Props, timeDuration, index) {
     const handleToggleactionVisibility = () => {
         setOpenactionitem(!isOpenactionitem)
         setIsContentVisible(!isContentVisible)
+
     }
 
     const [isOpenAudienceItem, setOpenAudienceItem] = useState(false);
@@ -297,12 +302,15 @@ function AllContactSub(Props, timeDuration, index) {
 
     // user all data
     const [contactId, setContactId] = useState(null);
-    const [selectedContactId, setSelectedContactId] = useState(null);
+    const [selectedContactId, setSelectedContactId] = useState(false);
 
-    // const handleContactFavoritActive = (contactId) => {
-    //     setSelectedContactId(contactId);
-    // };
-
+    const handleContactFavoritActive = (contactId) => { 
+        setSelectedContactId(contactId);
+    };
+    const handleProfileVisible = () => {
+        setIsContentVisible(!isContentVisible);
+      setuserProfileVisible(!userProfileVisible);
+    }
 
     return (
 
@@ -315,7 +323,7 @@ function AllContactSub(Props, timeDuration, index) {
 
                     {/*TODO USER ALL CONTACT RECORDES */}
                     <For each={userContacts}>
-                        {(userContact, index) =>
+                        {(userContact, index) =>(
                             <UserContact
                                 key={index}
                                 isCreateFolderVisible={isAddCheckbox}
@@ -327,15 +335,18 @@ function AllContactSub(Props, timeDuration, index) {
                                 byUser={userContact.ByUser}
                                 userDateAndTime={userContact.UserDateAndTime}
                                 isSelected={selectedContactId === userContact.id}
+                                // isFavorited={userContact.id === favorited}
                                 // onClick={handleToggleUserSaveInfoVisibility}
                                 toggleActionClick={() => {
                                     handleToggleUserSaveInfoVisibility();
                                     setContactId(userContact.id);
                                     setSelectedContactId(userContact.id);
+                                    // setFavorited(userContact.id);
                                     // handleContactFavoritActive(userContact.id);
                                 }}
+                                // handleContactFavoritActive={() => handleContactFavoritActive(userContact.id)}
                             />
-                        }
+                       ) }
                     </For>
                     {/* ))
                     } */}
@@ -349,7 +360,9 @@ function AllContactSub(Props, timeDuration, index) {
                             className={`user-save-info ${isUserSaveInfoVisible ? "block" : "hidden"}`}>
                             <UserDataNavbar
                              handleNoneProfile={handleNoneProfileToggle}
-                            //  handleContactFavorit={handleContactFavoritActive}
+                             handleContactFavorit={handleContactFavoritActive}
+                            //  for Action 
+                            handleProfileVisible={handleProfileVisible}
                              />
                             <div className={`user-all-frofile ${userProfileVisible ? "hidden" : "block"}`} >
                             <div className="text-center">
@@ -465,18 +478,18 @@ function AllContactSub(Props, timeDuration, index) {
                             />
                             <div className={isOpenactionitem ? "create-ploat-area" : "create-ploat-area hidden"}>
                                 <div className="action-content">
+                                <SendGroupSMS />
+                                </div>
+                            </div>
+
+                            <div className={isOpenAudienceItem ? "create-ploat-area" : "create-ploat-area hidden"}>
+                                <div className="action-content">
                                     <Action
                                         HeadingForm="All Contacts"
                                         HeadingItalic="All Contacts"
                                         HeadingTotal="Total Records"
                                         HeadingValue="7676"
                                     />
-                                </div>
-                            </div>
-
-                            <div className={isOpenAudienceItem ? "create-ploat-area" : "create-ploat-area hidden"}>
-                                <div className="action-content">
-                                    <SendGroupSMS />
                                 </div>
                             </div>
 
@@ -504,7 +517,7 @@ function AllContactSub(Props, timeDuration, index) {
 
                             {/* create folder Form For All Contact */}
 
-                            <div className={isCreateFolderVisible ? "create-ploat-area" : "create-ploat-area hidden"}>
+                            <div className={isCreateFolderVisible ? "create-ploat-area p-4" : "create-ploat-area hidden "}>
                                 <FormHeading
                                     headingForm="Create Folder For"
                                     headingItalic="Plots"
@@ -513,27 +526,19 @@ function AllContactSub(Props, timeDuration, index) {
                                 />
 
                                 <FormValidation FormOnSubmit={handleSubmit} labelName="Folder Name" inputName="folder name" />
+
                                 <div className="input-dropdown">
-                                    <label className="label-name" >Permission</label> <Dropdown
-                                        dropBg="#ffffff"
-                                        dropWidth='100%'
-                                        dropFont='11px'
-                                        dropPadding='17px 0px'
-                                        dropColor='#686868'
-                                        drodownWidth='100%'
+                                    <Dropdown {...createPropertyDrop[0]}
+                                    labelName="Permission"
                                         dropHeading="Select"
                                         dropOp1='Select'
                                         dropOp2='Aman Singh Nawat'
-                                        dropOp3='Amar'
+                                        dropOp3='Amar'  
                                         dropOp4='Ankit'
                                         dropOp5='Khushi'
                                     />
                                 </div>
-                                <div className="form-control form-btn">
-                                    <label></label>
-                                    <button type="submit" onClick={handleSubmit}>SUBMIT</button>
-                                    <button type="button" className="cancle-btn">CANCEL</button>
-                                </div>
+                                <SubmitCancelBtn submitName="SUBMIT" cancelName="CANCEL" />
                             </div>
 
                             {/* all Contact home area */}
@@ -544,20 +549,21 @@ function AllContactSub(Props, timeDuration, index) {
                                         <span>
                                             <FontAwesomeIcon style={{ fontSize: 'xx-large ' }} icon={faUsers} />
                                         </span>
-                                        <h2>All Contacts</h2>
+                                        <PageHeading pageHeading="All Contacts" />
                                     </div>
                                     {/* <form> */}
-                                    <div className="flex w-full">
-                                        <div className="w-full pb-4">
+                                    <div className="w-full">
+                                        <div className="w-full pb-4 flex justify-center">
                                             <SearchBar />
 
                                         </div>
                                     </div>
                                     <div className="flex justify-around">
-                                        <div className="search-btn p-0">
-                                            <button type="submit">Search</button>
+                                    <SearchBtn />
+                                        {/* <div className="search-btn p-0">
+                                            <button type="submit" className="px-104 py-9" >SEARCH</button>
 
-                                        </div>
+                                        </div> */}
                                         <div className="w-1/2">
 
                                             <AddvanceSearchBtn onAdvancedSearchClick={handleToggleAdvancedSearchVisibility} />

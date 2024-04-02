@@ -4,6 +4,7 @@ import FormValidation from "../../ChildComponents/FormValidation";
 import Dropdown from "../../field/Dropdown";
 import TextAreaInput from "../../field/TextAreaInput";
 import CurrentDateTime from "../../field/CurrentDateTime";
+import createPropertyDrop from "..//..//js/DropdownVarible";
 
 function SendGroupSMS(props) {
 
@@ -34,7 +35,8 @@ function SendGroupSMS(props) {
 
 
                 <div className="input-dropdown ">
-                    <label className="label-name" > Tamplate</label> <Dropdown
+                     <Dropdown {...createPropertyDrop[0]}
+                     labelName="Tamplate"
                         dropBg="#ffffff"
                         dropWidth='100%'
                         dropFont='11px'

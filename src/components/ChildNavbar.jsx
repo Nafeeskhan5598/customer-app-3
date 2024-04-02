@@ -105,7 +105,7 @@ function ChildNavbar(props) {
 
 
 
-                            <section onClick={(e) => { handleToggleAudience(); }}>
+                            <section onClick={(e) => { handleToggleAudience();  }}>
                                 <UserContact
                                     contactIcon={<FontAwesomeIcon className="pl-2" icon={faBullhorn} />}
                                     userName="Create Audience"

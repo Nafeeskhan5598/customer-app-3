@@ -3,56 +3,11 @@ import Dropdown from "../../field/Dropdown";
 import TextAreaInput from "../../field/TextAreaInput";
 import CheckRectangle from '../../button/CheckRectangle';
 import PageHeading from '../../common/PageHeading';
+import SubmitCancelBtn from '../../button/SubmitCancelBtn';
+import LabelName from '../../field/LabelName';
+import createPropertyDrop from '..//..//js/DropdownVarible'
 
 function CreatePropertiesBasicInfo({ onContinueClick }) {
-
-    // const [setShowContactProfessionalSub, email, setEmail, setErrorMessage, mobileNumber, setMobileNumber, setMobileNumberError, currentStep, setCurrentStep] = useState(0); 
-
-    // const [showContactProfessionalSub, setShowContactProfessionalSub] = useState(false);
-
-    // const [email, setEmail] = useState('');
-    // const [errorMessage, setErrorMessage] = useState('');
-    // const [mobileNumber, setMobileNumber] = useState('');
-    // const [mobileNumberError, setMobileNumberError] = useState('');
-    // const [currentStep, setCurrentStep] = useState(0);
-
-    // const handleChange = (e) => {
-    //     setEmail(e.target.value);
-    //     setErrorMessage(''); // Clear any previous error message when the user types
-
-    // };
-
-    // const handleChangeMobileNumber = (e) => {
-    //     setMobileNumber(e.target.value);
-    //     setMobileNumberError(''); // Clear any previous error message when the user types
-
-    // };
-
-    // const handleContinue = () => {
-    //     setCurrentStep((prevStep) => prevStep + 1);
-    //     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    //     if (!emailRegex.test(email)) {
-    //         setErrorMessage('Please enter a valid email address.');
-    //         return;
-    //     }
-
-    //     // Check if the email has a Gmail domain
-    //     if (!email.endsWith('@gmail.com')) {
-    //         setErrorMessage('Please enter a Gmail address.');
-    //         return;
-    //     }
-
-    // Validate mobile number
-    // const mobileRegex = /^[0-9]{10}$/;
-    // if (!mobileRegex.test(mobileNumber)) {
-    //     setMobileNumberError('Please enter a valid 10-digit mobile number.');
-    //     return;
-    // }
-
-    //     setShowContactProfessionalSub(true);
-
-
-    // };
 
     const [selectedDate, setSelectedDate] = useState('');
 
@@ -70,9 +25,6 @@ function CreatePropertiesBasicInfo({ onContinueClick }) {
     }, []);
 
 
-
-
-
     return (
 
         <>
@@ -82,25 +34,18 @@ function CreatePropertiesBasicInfo({ onContinueClick }) {
                     <PageHeading pageHeading="Give us Some information basic requiments" />
 
                     <div className="input-dropdown">
-
-                        <label className="label-name" > Request Date</label>
+                        <LabelName labelName="Request Date" />
                         <input
                             type='date'
                             className="form-search !w-[100%]"
                             value={selectedDate}
                             onChange={(e) => setSelectedDate(e.target.value)}
                         />
-                        {/* <label className="form-search !w-[30%] bg-[#efefef]">Est Close Date</label>
-                        <input type="date" className="form-search !w-[35%]" placeholder="First Name" /> */}
+
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > For</label> <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="For"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Sale'
@@ -112,15 +57,10 @@ function CreatePropertiesBasicInfo({ onContinueClick }) {
 
                         />
                     </div>
-                    <div className="input-dropdown">
-                        <label className="label-name" > Property Type</label> <Dropdown
 
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                    <div className="input-dropdown">
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Property Type"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Residetial'
@@ -135,14 +75,8 @@ function CreatePropertiesBasicInfo({ onContinueClick }) {
                     </div>
 
                     <div className="input-dropdown">
-                        <label className="label-name" >Transaction</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Transaction"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='New'
@@ -155,14 +89,8 @@ function CreatePropertiesBasicInfo({ onContinueClick }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Ownership</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Ownership"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Free Hold'
@@ -172,13 +100,8 @@ function CreatePropertiesBasicInfo({ onContinueClick }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Bedroom</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Bedroom"
                             drodownWidth='100%'
                             dropHeading="Select"
                             dropOp1='Select'
@@ -192,14 +115,9 @@ function CreatePropertiesBasicInfo({ onContinueClick }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Furnishing</label>
-                        <Dropdown
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Furnishing"
                             dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Full Furnished'
@@ -212,14 +130,8 @@ function CreatePropertiesBasicInfo({ onContinueClick }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Suitable For</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Suitable For"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Mrs'
@@ -229,14 +141,8 @@ function CreatePropertiesBasicInfo({ onContinueClick }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Uniqe Feature</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Uniqe Feature"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Mrs'
@@ -246,14 +152,8 @@ function CreatePropertiesBasicInfo({ onContinueClick }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Channel</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Channel"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Direct'
@@ -302,14 +202,11 @@ function CreatePropertiesBasicInfo({ onContinueClick }) {
                             />
                         </div>
                     </div>
-                    <div className="form-control form-btn">
-                        <label></label>
-                        <button type="submit" className='continue-btn' onClick={onContinueClick}>CONTINUE</button>
-                        <button type="button" className="cancle-btn">CANCEL</button>
-                    </div>
+                    <SubmitCancelBtn submitName="CONTINUE" cancelName="CANCEL" onContinueClick={onContinueClick} />
                 </div>
             </form>
         </>
     )
+
 }
 export default CreatePropertiesBasicInfo;

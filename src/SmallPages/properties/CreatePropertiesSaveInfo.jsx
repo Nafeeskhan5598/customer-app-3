@@ -4,6 +4,8 @@ import CheckRectangle from '../../button/CheckRectangle';
 import RadioBtn from '../../button/RadioBtn';
 import Switch from 'react-js-switch'
 import PageHeading from '../../common/PageHeading';
+import SubmitCancelBtn from '../../button/SubmitCancelBtn';
+import createPropertyDrop from '../../js/DropdownVarible';
 
 function CreatePropertiesSaveInfo({ onContinueClick, currentStep }) {
 
@@ -32,17 +34,10 @@ function CreatePropertiesSaveInfo({ onContinueClick, currentStep }) {
                             className="form-search !w-[100%]"
 
                         />
-                        {/* <label className="form-search !w-[30%] bg-[#efefef]">Est Close Date</label>
-                        <input type="date" className="form-search !w-[35%]" placeholder="First Name" /> */}
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Refer By</label> <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Refer By"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Sale'
@@ -55,14 +50,8 @@ function CreatePropertiesSaveInfo({ onContinueClick, currentStep }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Key Holder </label> <Dropdown
-
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Key Holder"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Residetial'
@@ -77,14 +66,8 @@ function CreatePropertiesSaveInfo({ onContinueClick, currentStep }) {
                     </div>
 
                     <div className="input-dropdown">
-                        <label className="label-name" >Folder</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Folder"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='New'
@@ -97,14 +80,8 @@ function CreatePropertiesSaveInfo({ onContinueClick, currentStep }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" > Source</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Source"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='99acres.com'
@@ -116,14 +93,8 @@ function CreatePropertiesSaveInfo({ onContinueClick, currentStep }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" >Branch</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Branch"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='1 RK'
@@ -136,14 +107,8 @@ function CreatePropertiesSaveInfo({ onContinueClick, currentStep }) {
                         />
                     </div>
                     <div className="input-dropdown">
-                        <label className="label-name" >Assignee</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
+                        <Dropdown {...createPropertyDrop[0]}
+                            labelName="Assignee"
                             dropHeading="Select"
                             dropOp1='Select'
                             dropOp2='Full Furnished'
@@ -157,12 +122,12 @@ function CreatePropertiesSaveInfo({ onContinueClick, currentStep }) {
                     </div>
                     <div className="input-dropdown">
                         <label className="label-name" >Featured</label>
-                    <Switch
-                        value={isSwitchOn}
-                        onChange={switch_onChange_handle}
-                        backgroundColor={{ on: '#007bff', off: '#c5c5c5' }}
-                        borderColor={{ on: '#007bff', off: 'white' }}
-                    />
+                        <Switch
+                            value={isSwitchOn}
+                            onChange={switch_onChange_handle}
+                            backgroundColor={{ on: '#007bff', off: '#c5c5c5' }}
+                            borderColor={{ on: '#007bff', off: 'white' }}
+                        />
                     </div>
 
                     <div className='chec flex justify-around pl-28'>
@@ -208,102 +173,8 @@ function CreatePropertiesSaveInfo({ onContinueClick, currentStep }) {
                         </div>
                     </div>
 
-                   {/* <div className="input-dropdown">
-                        <label className="label-name" > Suitable For</label>
-                        <DropdownSecond
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
-                            dropHeading="Select"
-                            dropOp1='Select'
-                            dropOp2='Mrs'
-                            dropOp3='Ms'
-                            dropOp4='Miss'
-                            dropOp5='Mr'
-                        />
-                    </div> */}
-                   {/*   <div className="input-dropdown">
-                        <label className="label-name" > Uniqe Feature</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
-                            dropHeading="Select"
-                            dropOp1='Select'
-                            dropOp2='Mrs'
-                            dropOp3='Ms'
-                            dropOp4='Miss'
-                            dropOp5='Mr'
-                        />
-                    </div>
-                    <div className="input-dropdown">
-                        <label className="label-name" > Channel</label>
-                        <Dropdown
-                            dropBg="#ffffff"
-                            dropWidth='100%'
-                            dropFont='11px'
-                            dropPadding='10px 0px'
-                            dropColor='#686868'
-                            drodownWidth='100%'
-                            dropHeading="Select"
-                            dropOp1='Select'
-                            dropOp2='Direct'
-                            dropOp3='Agent'
-                            dropOp4='Builder'
-                            dropOp5='Other'
-                        />
-                    </div>
-                    <div className="your-form-container">
-                        < TextAreaInput
-                            id="myTextarea"
-                            label="Description"
-                            placeholder="Enter your description here"
-                            rows={3}
-                            textAreaWidth="100%"
-                        />
-                    </div>
-                    <div className="input-dropdown relative bottom-4">
-                        <label className="label-name" ></label>
-                        <div className='text-[#bbb8b8]'>Maximum 2000 character allowed</div>
-                    </div>
-                    <div className="your-form-container">
-                        < TextAreaInput
-                            id="myTextarea"
-                            label="REmark"
-                            placeholder="Enter your description here"
-                            rows={3}
-                            textAreaWidth="100%"
-                        />
-                    </div>
-                    <div className="input-dropdown relative bottom-4">
-                        <label className="label-name" ></label>
-                        <div className='text-[#bbb8b8]'>Maximum 2000 character allowed</div>
-                    </div> */}
+                    <SubmitCancelBtn submitName="CONTINUE" cancelName="CANCEL" onContinueClick={onContinueClick} />
 
-                    {/* <div className='chec flex justify-around pl-28 pb-4'>
-                        <div className="">
-                            <CheckRectangle
-                                checkTxt="Have you verified all Property ducument"
-                            />
-
-                        </div>
-                        <div>
-                            <CheckRectangle
-                                checkTxt="Have you completedproperty visit"
-                            />
-                        </div>
-                    </div> */}
-                    <div className="form-control form-btn">
-                        <label></label>
-                        <button type="submit" className='continue-btn' onClick={onContinueClick}>SAVE & SUBMIT</button>
-                        <button type="button" className="cancle-btn">CANCEL</button>
-                    </div>
                 </div>
             </form>
         </>

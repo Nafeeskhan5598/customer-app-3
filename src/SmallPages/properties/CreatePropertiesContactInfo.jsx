@@ -4,6 +4,7 @@ import React from 'react';
 import Dropdown from "../../field/Dropdown";
 import PageHeading from '../../common/PageHeading';
 import ContinueCancelNewBtn from '../../button/ContinueCancelNewBtn';
+import createPropertyDrop from '../../js/DropdownVarible';
 // import ProgressStepsForm from '../../progress/ProgressStepsForm';
 // import { For } from "million/react";
 
@@ -17,13 +18,8 @@ function CreatePropertiesContactInfo({ onContinueClick }) {
 
                     <div className="your-form-container">
                         <div className="input-dropdown">
-                            <label className="label-name" >Owner / Landload </label> <Dropdown
-                                dropBg="#ffffff"
-                                dropWidth='100%;'
-                                dropFont='11px'
-                                dropPadding='10px 0px'
-                                dropColor='#686868'
-                                drodownWidth='100%'
+                            <Dropdown {...createPropertyDrop[0]}
+                            labelName="Owner / Landload"
                                 dropHeading="Select"
                                 dropOp1='Select'
                                 dropSearch="search"

@@ -312,7 +312,7 @@ function NavArea() {
                             <button type="button" className="nav-link p-2" data-fc-type="offcanvas"
                                 data-fc-scroll="true">
                                 <span className="sr-only">Customization Button</span>
-                                <span className="flex items-center justify-center h-6 w-6 toggle-icon hover:text-[#71b6f9] animate-spin">
+                                <span className="flex items-center justify-center h-6 w-6 toggle-icon hover:text-[#71b6f9] hover:animate-spin">
                                     {/* <i className="fa-solid fa-gear dark:hidden"></i> */}
                                     <FontAwesomeIcon icon={faGear} />
                                 </span>

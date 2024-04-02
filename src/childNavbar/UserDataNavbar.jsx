@@ -19,14 +19,15 @@ import FormHeading from "../SubComponents/formSub/FormHeading";
 import axios from "axios";
 import ContactPersonalSub from "../SubComponents/contactSub/ContactPersonalSub";
 
-function UserDataNavbar({ handleDropdownToggleTransfer, handleNoneProfile, handleContactFavorit }, props) {
+function UserDataNavbar({ handleDropdownToggleTransfer, handleNoneProfile, handleContactFavorit, handleProfileVisible }, props) {
 
     const [dashboardData, setDashboardData] = useState({ allContacts: { contactConvertLead: [] } });
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:3001/allContacts");
+                const response = await axios.get(`${process.env.REACT_APP_VARIABLE_APIURL}/allContacts`);
+                
                 setDashboardData(response.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
@@ -131,19 +132,21 @@ function UserDataNavbar({ handleDropdownToggleTransfer, handleNoneProfile, handl
     }
 
     const subNavActionItem = [
-        { id: 1, icon: faCircleCheck, userName: "Change Status", userEmail: "Change lead status", handleActionClick: handleActionChangeStatus },
-        { id: 2, icon: faCommentDots, userName: "Send SMS", userEmail: "Send SMS to leads", handleActionClick: handleActionSendSMS },
-        { id: 3, icon: faEnvelope, userName: "Send Email", userEmail: "Send email to leads", handleActionClick: handleActionSendEmail },
-        { id: 4, icon: faCommentDots, userName: "Quick Note", userEmail: "Write some remarkables", handleActionClick: handleActionQuickNote },
-        { id: 5, icon: faHistory, userName: "History", userEmail: "Contact history", handleActionClick: handleActionHistory },
+        { id: 1, icon: faCircleCheck, userName: "Change Status", userEmail: "Change lead status", handleActionClick: (e) => { handleActionChangeStatus(); handleProfileVisible(e); } },
+        { id: 2, icon: faCommentDots, userName: "Send SMS", userEmail: "Send SMS to leads", handleActionClick: (e) => { handleActionSendSMS(); handleProfileVisible(e); } },
+        { id: 3, icon: faEnvelope, userName: "Send Email", userEmail: "Send email to leads", handleActionClick: (e) => { handleActionSendEmail(); handleProfileVisible(e); } },
+        { id: 4, icon: faCommentDots, userName: "Quick Note", userEmail: "Write some remarkables", handleActionClick:(e) => { handleActionQuickNote(); handleProfileVisible(e); } },
+        { id: 5, icon: faHistory, userName: "History", userEmail: "Contact history", handleActionClick: (e) => { handleActionHistory(); handleProfileVisible(e); } },
         { id: 6, icon: faPenToSquare, userName: "Edit Contact", userEmail: "Edit contact" },
         { id: 7, icon: faClipboardList, userName: "Site Visit", userEmail: "View all site visits" },
-        { id: 8, icon: faTrashCan, userName: "Delete", userEmail: "Delete your lead", handleActionClick: handleActionDeleteLead }
+        { id: 8, icon: faTrashCan, userName: "Delete", userEmail: "Delete your lead", handleActionClick: (e) => { handleActionDeleteLead(); handleProfileVisible(e); } }
 
     ]
 
 
-    
+ const toggleAction = () => {
+    setDropdownOpen(!isDropdownOpen);
+ }   
 
 
     return (
@@ -167,7 +170,7 @@ function UserDataNavbar({ handleDropdownToggleTransfer, handleNoneProfile, handl
                             <span className="text-sm pl-2">PROFILE</span>
                         </Link>
                     </li>
-                    <li className="small-nav-transfer flex" onClick={(e) => { handleContactFavorit(e);}}>
+                    <li className="small-nav-transfer flex" onClick={handleContactFavorit}>
                         <span>
                             <FontAwesomeIcon className="pl-2" icon={faStar} />
                         </span>
@@ -197,7 +200,7 @@ function UserDataNavbar({ handleDropdownToggleTransfer, handleNoneProfile, handl
 
                     <li className="small-nav-action flex"
                     //  onClick={handleDropdownToggle}
-                     onClick={() => props.toggleFavorite()} >
+                     onClick={toggleAction} >
                         <span className="nav-action">
                             <FontAwesomeIcon className="pl-2" icon={faBars} />
                         </span>
@@ -210,7 +213,7 @@ function UserDataNavbar({ handleDropdownToggleTransfer, handleNoneProfile, handl
 
                                 <For each={subNavActionItem}>
                                     {(audience) =>
-                                        <section key={audience.id} onClick={(e) => { handleToggleAudience(); }}>
+                                        <section key={audience.id} onClick={() => { handleToggleAudience(); }}>
                                             <UserContact
                                                 contactIcon={<FontAwesomeIcon className="pl-2" icon={audience.icon} />}
                                                 userName={audience.userName}

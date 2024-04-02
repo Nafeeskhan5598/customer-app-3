@@ -3,15 +3,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { GoogleApiWrapper } from 'google-maps-react';
 import { faChartArea, faIndianRupeeSign, faCalendarWeek, faBars, faLock, faCalendar, faPercent } from '@fortawesome/free-solid-svg-icons';
 import Dropdown from "../../field/Dropdown";
-// import GoogleMaps from '../../map/GoogleMaps';
-// import FormValidation from '..//..//ChildComponents/FormValidation';
 import CheckRectangle from '../../button/CheckRectangle';
 import TowInput from '../../field/TowInput';
 import PageHeading from '../../common/PageHeading';
+import SubmitCancelBtn from '../../button/SubmitCancelBtn';
+import createPropertyDrop from '../../js/DropdownVarible';
 
 function CreatePropertyArea({ onContinueClick }) {
 
-  
+
 
     return (
 
@@ -19,7 +19,6 @@ function CreatePropertyArea({ onContinueClick }) {
             <form action="">
                 <div className="create-lead-area pt-10">
                     <PageHeading pageHeading="Give us some information about Area" />
-
                     <div className="your-form-container">
                         <div className='pb-4'>
                             <div className="input-dropdown">
@@ -36,13 +35,7 @@ function CreatePropertyArea({ onContinueClick }) {
                                     </div>
                                     <div className='w-[30%]'>
                                         <label className=" !w-[48%] !rounded-none text-center">
-                                            <Dropdown
-                                                dropBg="#ffffff"
-                                                dropWidth='100%'
-                                                dropFont='11px'
-                                                dropPadding='10px 0px'
-                                                dropColor='#686868'
-                                                drodownWidth='100%'
+                                            <Dropdown {...createPropertyDrop[0]}
                                                 dropHeading="Select"
                                                 dropOp1='Select'
                                                 dropOp2='sQ.Ft'
@@ -70,13 +63,7 @@ function CreatePropertyArea({ onContinueClick }) {
                                     </div>
                                     <div className='w-[30%]'>
                                         <label className=" !w-[48%] !rounded-none text-center">
-                                            <Dropdown
-                                                dropBg="#ffffff"
-                                                dropWidth='100%'
-                                                dropFont='11px'
-                                                dropPadding='10px 0px'
-                                                dropColor='#686868'
-                                                drodownWidth='100%'
+                                            <Dropdown {...createPropertyDrop[0]}
                                                 dropHeading="Select"
                                                 dropOp1='Select'
                                                 dropOp2='sQ.Ft'
@@ -105,13 +92,7 @@ function CreatePropertyArea({ onContinueClick }) {
                                     </div>
                                     <div className='w-[30%]'>
                                         <label className=" !w-[48%] !rounded-none text-center">
-                                            <Dropdown
-                                                dropBg="#ffffff"
-                                                dropWidth='100%'
-                                                dropFont='11px'
-                                                dropPadding='10px 0px'
-                                                dropColor='#686868'
-                                                drodownWidth='100%'
+                                            <Dropdown {...createPropertyDrop[0]}
                                                 dropHeading="Select"
                                                 dropOp1='Select'
                                                 dropOp2='sQ.Ft'
@@ -139,13 +120,7 @@ function CreatePropertyArea({ onContinueClick }) {
                                     </div>
                                     <div className='w-[30%]'>
                                         <label className=" !w-[48%] !rounded-none text-center">
-                                            <Dropdown
-                                                dropBg="#ffffff"
-                                                dropWidth='100%'
-                                                dropFont='11px'
-                                                dropPadding='10px 0px'
-                                                dropColor='#686868'
-                                                drodownWidth='100%'
+                                            <Dropdown {...createPropertyDrop[0]}
                                                 dropHeading="Select"
                                                 dropOp1='Select'
                                                 dropOp2='sQ.Ft'
@@ -183,13 +158,7 @@ function CreatePropertyArea({ onContinueClick }) {
                                     </div>
                                     <div className='w-[30%]'>
                                         <label className=" !w-[48%] !rounded-none text-center">
-                                            <Dropdown
-                                                dropBg="#ffffff"
-                                                dropWidth='100%'
-                                                dropFont='11px'
-                                                dropPadding='10px 0px'
-                                                dropColor='#686868'
-                                                drodownWidth='100%'
+                                            <Dropdown {...createPropertyDrop[0]}
                                                 dropHeading="Select"
                                                 dropOp1='Select'
                                                 dropOp2='sQ.Ft'
@@ -218,13 +187,7 @@ function CreatePropertyArea({ onContinueClick }) {
                                     </div>
                                     <div className='w-[30%]'>
                                         <label className=" !w-[48%] !rounded-none text-center">
-                                            <Dropdown
-                                                dropBg="#ffffff"
-                                                dropWidth='100%'
-                                                dropFont='11px'
-                                                dropPadding='10px 0px'
-                                                dropColor='#686868'
-                                                drodownWidth='100%'
+                                            <Dropdown {...createPropertyDrop[0]}
                                                 dropHeading="Select"
                                                 dropOp1='Select'
                                                 dropOp2='sQ.Ft'
@@ -312,13 +275,7 @@ function CreatePropertyArea({ onContinueClick }) {
                                 <label className="label-name" >Expected Price</label>
                                 <label className="form-search !w-[4.5%] bg-[#efefef] !rounded-none text-center">    <FontAwesomeIcon icon={faIndianRupeeSign} /></label>
                                 <label className=" !w-[95.5%] !rounded-none text-center">
-                                    <Dropdown
-                                        dropBg="#ffffff"
-                                        dropWidth='100%'
-                                        dropFont='11px'
-                                        dropPadding='10px 0px'
-                                        dropColor='#686868'
-                                        drodownWidth='100%'
+                                    <Dropdown {...createPropertyDrop[0]}
                                         dropHeading="Select"
                                         dropOp1='Select'
                                         dropOp2='sQ.Ft'
@@ -336,13 +293,7 @@ function CreatePropertyArea({ onContinueClick }) {
                                 <label className="label-name" >Nagotiable Amount</label>
                                 <label className="form-search !w-[4.5%] bg-[#efefef] !rounded-none text-center">    <FontAwesomeIcon icon={faIndianRupeeSign} /></label>
                                 <label className=" !w-[40.5%] !rounded-none text-center">
-                                    <Dropdown
-                                        dropBg="#ffffff"
-                                        dropWidth='100%'
-                                        dropFont='11px'
-                                        dropPadding='10px 0px'
-                                        dropColor='#686868'
-                                        drodownWidth='100%'
+                                    <Dropdown {...createPropertyDrop[0]}
                                         dropHeading="Select"
                                         dropOp2='sQ.Ft'
                                         dropOp3='Sq.Meter'
@@ -546,11 +497,9 @@ function CreatePropertyArea({ onContinueClick }) {
 
                             />
 
-                            <div className="form-control form-btn">
-                                <label></label>
-                                <button type="submit" className='continue-btn' onClick={onContinueClick}>CONTINUE</button>
-                                <button type="button" className="cancle-btn">CANCEL</button>
-                            </div>
+
+                            <SubmitCancelBtn submitName="CONTINUE" cancelName="CANCEL" onContinueClick={onContinueClick} />
+
                         </div>
                     </div>
                 </div>
